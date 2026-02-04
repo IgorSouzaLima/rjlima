@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rastrear Nota Fiscal | RJ Lima Transportes</title>
+    <meta name="description" content="Rastreie sua nota fiscal e acompanhe o status da sua entrega em tempo real.">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-black text-white min-h-screen flex flex-col selection:bg-red-500/30">
+
+    <!-- Header placeholder -->
+    <div id="header-container"></div>
+
+    <!-- Main Content -->
+    <main class="flex-1 pt-32 pb-16 px-6">
+        <div class="container mx-auto max-w-3xl">
+            <!-- Title -->
+            <div class="text-center mb-12">
+                <span class="text-red-500 font-bold tracking-[0.2em] uppercase text-sm">Rastreamento</span>
+                <h1 class="text-4xl md:text-5xl font-extrabold mt-4 mb-4">
+                    Rastrear <span class="text-red-600">Nota Fiscal</span>
+                </h1>
+                <p class="text-gray-400 max-w-md mx-auto">
+                    Informe a chave da nota fiscal para consultar o status da sua entrega.
+                </p>
+            </div>
+
+            <!-- Search Form -->
+            <div class="glass p-8 rounded-3xl mb-8">
+                <form id="tracking-form" class="space-y-6">
+                    <div class="space-y-2">
+                        <label for="fiscal-key" class="text-sm font-semibold text-gray-400">
+                            Chave da Nota Fiscal (44 digitos)
+                        </label>
+                        <div class="relative">
+                            <input
+                                type="text"
+                                id="fiscal-key"
+                                name="fiscal-key"
+                                maxlength="44"
+                                class="w-full bg-white/5 border border-white/10 rounded-xl p-4 pr-12 focus:border-red-600 outline-none transition font-mono text-lg tracking-wider"
+                                placeholder="0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000"
+                                inputmode="numeric"
+                            >
+                            <button
+                                type="button"
+                                id="paste-btn"
+                                class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-white transition p-2"
+                                title="Colar da area de transferencia"
+                            >
+                                <i class="fas fa-paste"></i>
+                            </button>
+                        </div>
+                        <p id="key-error" class="text-red-500 text-sm hidden">
+                            <i class="fas fa-exclamation-circle mr-1"></i>
+                            A chave deve conter exatamente 44 digitos numericos.
+                        </p>
+                    </div>
+
+                    <button
+                        type="submit"
+                        id="submit-btn"
+                        class="w-full red-gradient py-4 rounded-xl font-bold hover:scale-[1.01] active:scale-95 transition shadow-xl shadow-red-900/30 flex items-center justify-center gap-2"
+                    >
+                        <i class="fas fa-search"></i>
+                        Rastrear
+                    </button>
+                </form>
+            </div>
+
+            <!-- Result Container -->
+            <div id="result-container" class="hidden">
+                <!-- Content will be injected here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer placeholder -->
+    <div id="footer-container"></div>
+
+    <script type="module" src="/src/tracking/main.js"></script>
+</body>
+</html>

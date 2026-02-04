@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | RJ Lima Transportes - Admin</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-black text-white min-h-screen flex flex-col selection:bg-red-500/30">
+
+    <!-- Header placeholder -->
+    <div id="header-container"></div>
+
+    <!-- Main Content -->
+    <main class="flex-1 pt-28 pb-16 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <!-- Page Title -->
+            <div class="flex items-center justify-between mb-8 flex-wrap gap-4">
+                <div>
+                    <h1 class="text-3xl font-extrabold">Notas Fiscais</h1>
+                    <p class="text-gray-500 mt-1">Gerencie as notas fiscais cadastradas</p>
+                </div>
+                <button
+                    id="new-invoice-btn"
+                    class="red-gradient px-6 py-3 rounded-xl font-bold hover:scale-[1.01] active:scale-95 transition shadow-lg shadow-red-900/30 flex items-center gap-2"
+                >
+                    <i class="fas fa-plus"></i>
+                    Nova Nota
+                </button>
+            </div>
+
+            <!-- Filters -->
+            <div class="glass p-6 rounded-2xl mb-6">
+                <div class="grid md:grid-cols-3 gap-4">
+                    <!-- Search -->
+                    <div class="md:col-span-2">
+                        <div class="relative">
+                            <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500">
+                                <i class="fas fa-search"></i>
+                            </span>
+                            <input
+                                type="text"
+                                id="search-input"
+                                class="w-full bg-white/5 border border-white/10 rounded-xl p-3 pl-12 focus:border-red-600 outline-none transition"
+                                placeholder="Buscar por numero, destinatario ou chave..."
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Status Filter -->
+                    <div>
+                        <select
+                            id="status-filter"
+                            class="w-full bg-white/5 border border-white/10 rounded-xl p-3 focus:border-red-600 outline-none transition appearance-none cursor-pointer"
+                        >
+                            <option value="">Todos os status</option>
+                            <option value="Aguardando coleta">Aguardando coleta</option>
+                            <option value="Aguardando coleta para entrega">Aguardando coleta para entrega</option>
+                            <option value="Em rota">Em rota</option>
+                            <option value="Entregue">Entregue</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Invoices Table -->
+            <div class="glass rounded-2xl overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="border-b border-white/10 bg-white/5">
+                                <th class="text-left p-4 text-sm font-semibold text-gray-400">Nota</th>
+                                <th class="text-left p-4 text-sm font-semibold text-gray-400">Destinatario</th>
+                                <th class="text-left p-4 text-sm font-semibold text-gray-400 hidden md:table-cell">Destino</th>
+                                <th class="text-left p-4 text-sm font-semibold text-gray-400 hidden lg:table-cell">Data Coleta</th>
+                                <th class="text-left p-4 text-sm font-semibold text-gray-400">Status</th>
+                                <th class="text-right p-4 text-sm font-semibold text-gray-400">Acoes</th>
+                            </tr>
+                        </thead>
+                        <tbody id="invoices-table-body">
+                            <!-- Content will be injected here -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Empty State -->
+                <div id="empty-state" class="hidden p-12 text-center">
+                    <div class="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-file-invoice text-2xl text-gray-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Nenhuma nota encontrada</h3>
+                    <p class="text-gray-500">Clique em "Nova Nota" para cadastrar uma nota fiscal.</p>
+                </div>
+
+                <!-- Loading State -->
+                <div id="loading-state" class="p-12 text-center">
+                    <i class="fas fa-spinner fa-spin text-3xl text-red-500 mb-4"></i>
+                    <p class="text-gray-500">Carregando notas...</p>
+                </div>
+
+                <!-- Pagination -->
+                <div id="pagination" class="hidden border-t border-white/10 p-4 flex items-center justify-between">
+                    <p class="text-sm text-gray-500">
+                        Mostrando <span id="showing-from">0</span>-<span id="showing-to">0</span> de <span id="total-count">0</span>
+                    </p>
+                    <div class="flex gap-2">
+                        <button
+                            id="prev-page"
+                            class="px-4 py-2 bg-white/5 rounded-lg hover:bg-white/10 transition disabled:opacity-50 disabled:cursor-not-allowed"
+                        >
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button
+                            id="next-page"
+                            class="px-4 py-2 bg-white/5 rounded-lg hover:bg-white/10 transition disabled:opacity-50 disabled:cursor-not-allowed"
+                        >
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Invoice Modal -->
+    <div id="invoice-modal" class="fixed inset-0 z-[80] bg-black/80 hidden items-center justify-center p-4 overflow-y-auto">
+        <div class="glass w-full max-w-2xl rounded-3xl my-8">
+            <!-- Modal Header -->
+            <div class="flex items-center justify-between p-6 border-b border-white/10">
+                <h2 id="modal-title" class="text-xl font-bold">Nova Nota Fiscal</h2>
+                <button id="close-modal" class="text-gray-500 hover:text-white transition">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Modal Body -->
+            <form id="invoice-form" class="p-6 space-y-6">
+                <input type="hidden" id="invoice-id" value="">
+
+                <div class="grid md:grid-cols-2 gap-4">
+                    <!-- Invoice Number -->
+                    <div class="space-y-2">
+                        <label for="invoice-number" class="text-sm font-semibold text-gray-400">Numero da Nota *</label>
+                        <input
+                            type="text"
+                            id="invoice-number"
+                            required
+                            class="w-full bg-white/5 border border-white/10 rounded-xl p-3 focus:border-red-600 outline-none transition"
+                            placeholder="Ex: NF-001234"
+                        >
+                    </div>
+
+                    <!-- Collection Date -->
+                    <div class="space-y-2">
+                        <label for="collection-date" class="text-sm font-semibold text-gray-400">Data de Coleta *</label>
+                        <input
+                            type="date"
+                            id="collection-date"
+                            required
+                            class="w-full bg-white/5 border border-white/10 rounded-xl p-3 focus:border-red-600 outline-none transition"
+                        >
+                    </div>
+                </div>
+
+                <!-- Recipient -->
+                <div class="space-y-2">
+                    <label for="recipient" class="text-sm font-semibold text-gray-400">Destinatario *</label>
+                    <input
+                        type="text"
+                        id="recipient"
+                        required
+                        class="w-full bg-white/5 border border-white/10 rounded-xl p-3 focus:border-red-600 outline-none transition"
+                        placeholder="Nome do destinatario"
+                    >
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-4">
+                    <!-- City -->
+                    <div class="md:col-span-2 space-y-2">
+                        <label for="city" class="text-sm font-semibold text-gray-400">Cidade *</label>
+                        <input
+                            type="text"
+                            id="city"
+                            required
+                            class="w-full bg-white/5 border border-white/10 rounded-xl p-3 focus:border-red-600 outline-none transition"
+                            placeholder="Ex: Belo Horizonte"
+                        >
+                    </div>
+
+                    <!-- State -->
+                    <div class="space-y-2">
+                        <label for="state" class="text-sm font-semibold text-gray-400">UF *</label>
+                        <select
+                            id="state"
+                            required
+                            class="w-full bg-white/5 border border-white/10 rounded-xl p-3 focus:border-red-600 outline-none transition appearance-none cursor-pointer"
+                        >
+                            <option value="">UF</option>
+                            <option value="AC">AC</option>
+                            <option value="AL">AL</option>
+                            <option value="AP">AP</option>
+                            <option value="AM">AM</option>
+                            <option value="BA">BA</option>
+                            <option value="CE">CE</option>
+                            <option value="DF">DF</option>
+                            <option value="ES">ES</option>
+                            <option value="GO">GO</option>
+                            <option value="MA">MA</option>
+                            <option value="MT">MT</option>
+                            <option value="MS">MS</option>
+                            <option value="MG">MG</option>
+                            <option value="PA">PA</option>
+                            <option value="PB">PB</option>
+                            <option value="PR">PR</option>
+                            <option value="PE">PE</option>
+                            <option value="PI">PI</option>
+                            <option value="RJ">RJ</option>
+                            <option value="RN">RN</option>
+                            <option value="RS">RS</option>
+                            <option value="RO">RO</option>
+                            <option value="RR">RR</option>
+                            <option value="SC">SC</option>
+                            <option value="SP">SP</option>
+                            <option value="SE">SE</option>
+                            <option value="TO">TO</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Fiscal Key -->
+                <div class="space-y-2">
+                    <label for="fiscal-key" class="text-sm font-semibold text-gray-400">Chave da Nota Fiscal (44 digitos) *</label>
+                    <input
+                        type="text"
+                        id="fiscal-key"
+                        required
+                        maxlength="44"
+                        pattern="[0-9]{44}"
+                        class="w-full bg-white/5 border border-white/10 rounded-xl p-3 focus:border-red-600 outline-none transition font-mono"
+                        placeholder="44 digitos numericos"
+                    >
+                    <p class="text-xs text-gray-500">Somente numeros, exatamente 44 digitos</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-4">
+                    <!-- Status -->
+                    <div class="space-y-2">
+                        <label for="status" class="text-sm font-semibold text-gray-400">Status *</label>
+                        <select
+                            id="status"
+                            required
+                            class="w-full bg-white/5 border border-white/10 rounded-xl p-3 focus:border-red-600 outline-none transition appearance-none cursor-pointer"
+                        >
+                            <option value="Aguardando coleta">Aguardando coleta</option>
+                            <option value="Aguardando coleta para entrega">Aguardando coleta para entrega</option>
+                            <option value="Em rota">Em rota</option>
+                            <option value="Entregue">Entregue</option>
+                        </select>
+                    </div>
+
+                    <!-- Delivery Date -->
+                    <div class="space-y-2">
+                        <label for="delivery-date" class="text-sm font-semibold text-gray-400">Data de Entrega</label>
+                        <input
+                            type="date"
+                            id="delivery-date"
+                            class="w-full bg-white/5 border border-white/10 rounded-xl p-3 focus:border-red-600 outline-none transition"
+                        >
+                    </div>
+                </div>
+
+                <!-- Proof Photo -->
+                <div class="space-y-2">
+                    <label class="text-sm font-semibold text-gray-400">Foto do Comprovante</label>
+                    <div id="photo-upload-area" class="border-2 border-dashed border-white/10 rounded-xl p-6 text-center hover:border-red-600/50 transition cursor-pointer">
+                        <input type="file" id="proof-photo" accept="image/*" class="hidden">
+                        <div id="photo-placeholder">
+                            <i class="fas fa-cloud-upload-alt text-3xl text-gray-500 mb-2"></i>
+                            <p class="text-gray-400">Clique ou arraste uma imagem</p>
+                            <p class="text-xs text-gray-500 mt-1">JPG, PNG ou WebP</p>
+                        </div>
+                        <div id="photo-preview" class="hidden">
+                            <img id="preview-image" src="" alt="Preview" class="max-h-48 mx-auto rounded-lg mb-2">
+                            <button type="button" id="remove-photo" class="text-red-500 hover:text-red-400 text-sm">
+                                <i class="fas fa-trash mr-1"></i>
+                                Remover foto
+                            </button>
+                        </div>
+                    </div>
+                    <input type="hidden" id="existing-photo-url" value="">
+                </div>
+
+                <!-- Form Error -->
+                <p id="form-error" class="text-red-500 text-sm hidden">
+                    <i class="fas fa-exclamation-circle mr-1"></i>
+                    <span></span>
+                </p>
+
+                <!-- Form Actions -->
+                <div class="flex gap-4 pt-4">
+                    <button
+                        type="button"
+                        id="cancel-btn"
+                        class="flex-1 bg-white/5 py-3 rounded-xl font-semibold hover:bg-white/10 transition"
+                    >
+                        Cancelar
+                    </button>
+                    <button
+                        type="submit"
+                        id="save-btn"
+                        class="flex-1 red-gradient py-3 rounded-xl font-bold hover:scale-[1.01] active:scale-95 transition shadow-lg shadow-red-900/30"
+                    >
+                        <i class="fas fa-save mr-2"></i>
+                        Salvar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="delete-modal" class="fixed inset-0 z-[80] bg-black/80 hidden items-center justify-center p-4">
+        <div class="glass w-full max-w-md rounded-3xl p-8 text-center">
+            <div class="w-16 h-16 bg-red-600/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-trash text-3xl text-red-500"></i>
+            </div>
+            <h2 class="text-xl font-bold mb-2">Excluir Nota Fiscal</h2>
+            <p class="text-gray-400 mb-6">Tem certeza que deseja excluir esta nota fiscal? Esta acao nao pode ser desfeita.</p>
+            <input type="hidden" id="delete-invoice-id" value="">
+            <div class="flex gap-4">
+                <button
+                    id="cancel-delete"
+                    class="flex-1 bg-white/5 py-3 rounded-xl font-semibold hover:bg-white/10 transition"
+                >
+                    Cancelar
+                </button>
+                <button
+                    id="confirm-delete"
+                    class="flex-1 bg-red-600 py-3 rounded-xl font-bold hover:bg-red-700 transition"
+                >
+                    <i class="fas fa-trash mr-2"></i>
+                    Excluir
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer placeholder -->
+    <div id="footer-container"></div>
+
+    <script type="module" src="/src/admin/main.js"></script>
+</body>
+</html>
