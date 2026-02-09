@@ -27,6 +27,7 @@
             <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-wider items-center">
                 <a href="#inicio" class="hover:text-red-500 transition">Início</a>
                 <a href="#areas" class="hover:text-red-500 transition">Atuação</a>
+                <a href="#diferenciais" class="hover:text-red-500 transition">Diferenciais</a>
                 <a href="#servicos" class="hover:text-red-500 transition">Serviços</a>
                 <a href="/rastreio/" class="hover:text-red-500 transition">Rastrear</a>
                 <a href="#orcamento" class="bg-red-600 px-6 py-2 rounded-full hover:bg-red-700 transition shadow-lg shadow-red-600/20">Orçamento</a>
@@ -42,6 +43,7 @@
         <div id="mobile-nav" class="mobile-menu absolute top-full left-0 w-full bg-black/98 flex-col p-6 space-y-4 border-t border-white/10 md:hidden shadow-2xl">
             <a href="#inicio" onclick="toggleMenu()" class="text-lg py-2 border-b border-white/5">Início</a>
             <a href="#areas" onclick="toggleMenu()" class="text-lg py-2 border-b border-white/5">Atuação</a>
+            <a href="#diferenciais" onclick="toggleMenu()" class="text-lg py-2 border-b border-white/5">Diferenciais</a>
             <a href="#servicos" onclick="toggleMenu()" class="text-lg py-2 border-b border-white/5">Serviços</a>
             <a href="/rastreio/" onclick="toggleMenu()" class="text-lg py-2 border-b border-white/5">Rastrear</a>
             <a href="#orcamento" onclick="toggleMenu()" class="text-lg py-2 text-red-500 font-bold">Solicitar Orçamento</a>
@@ -54,20 +56,64 @@
             <div class="space-y-6">
                 <span class="text-red-500 font-bold tracking-[0.2em] uppercase text-sm">Logística Inteligente</span>
                 <h1 class="text-5xl md:text-7xl font-extrabold leading-tight">
-                    Sua carga no destino, <br><span class="text-red-600">sem fronteiras.</span>
+                    Transporte corporativo com <br><span class="text-red-600">confiança e performance.</span>
                 </h1>
                 <p class="text-gray-400 text-lg max-w-md">
-                    Especialistas em transporte fracionado e dedicado com monitoramento 24h, segurança total e eficiência logística.
+                    Operação dedicada para empresas que precisam de previsibilidade, segurança e comunicação clara em cada etapa da entrega.
                 </p>
                 <div class="flex flex-wrap gap-4">
                     <a href="#orcamento" class="red-gradient px-8 py-4 rounded-xl font-bold flex items-center shadow-lg shadow-red-900/20 hover:scale-105 transition">
                         <i class="fas fa-file-invoice-dollar mr-2"></i> Cotar Agora
                     </a>
+                    <a href="https://wa.me/5535999581894" target="_blank" class="border border-white/15 px-8 py-4 rounded-xl font-bold flex items-center hover:border-red-500 hover:text-red-400 transition">
+                        <i class="fab fa-whatsapp mr-2"></i> Falar com especialista
+                    </a>
+                </div>
+                <div class="grid grid-cols-3 gap-4 pt-4 text-center">
+                    <div class="metric-card">
+                        <p class="text-2xl font-extrabold text-white">+8 anos</p>
+                        <p class="text-xs uppercase tracking-wider text-gray-400">de mercado</p>
+                    </div>
+                    <div class="metric-card">
+                        <p class="text-2xl font-extrabold text-white">4 estados</p>
+                        <p class="text-xs uppercase tracking-wider text-gray-400">de cobertura</p>
+                    </div>
+                    <div class="metric-card">
+                        <p class="text-2xl font-extrabold text-white">24/7</p>
+                        <p class="text-xs uppercase tracking-wider text-gray-400">suporte ativo</p>
+                    </div>
                 </div>
             </div>
             <div class="hidden md:block relative">
                 <div class="absolute -inset-10 bg-red-600/10 blur-[100px] rounded-full"></div>
                 <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800" alt="Logística RJ Lima" class="rounded-2xl shadow-2xl border border-white/10 truck-float relative z-10">
+            </div>
+        </div>
+    </section>
+
+
+    <section id="diferenciais" class="py-20 bg-zinc-950 border-y border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Por que empresas escolhem a RJ Lima</h2>
+                <p class="text-gray-400 max-w-3xl mx-auto">Processo estruturado, comunicação proativa e foco em reduzir riscos da sua operação logística.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <article class="glass p-7 rounded-2xl border border-white/10">
+                    <i class="fas fa-shield-halved text-red-600 text-2xl mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2">Gestão de risco</h3>
+                    <p class="text-gray-400 text-sm">Acompanhamento de rota e protocolos de segurança para manter sua carga protegida do início ao fim.</p>
+                </article>
+                <article class="glass p-7 rounded-2xl border border-white/10">
+                    <i class="fas fa-route text-red-600 text-2xl mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2">Operação previsível</h3>
+                    <p class="text-gray-400 text-sm">Planejamento logístico com cronograma e atualização frequente para reduzir atrasos e incertezas.</p>
+                </article>
+                <article class="glass p-7 rounded-2xl border border-white/10">
+                    <i class="fas fa-users-gear text-red-600 text-2xl mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2">Atendimento consultivo</h3>
+                    <p class="text-gray-400 text-sm">Equipe preparada para propor soluções sob medida conforme volume, região e urgência da sua operação.</p>
+                </article>
             </div>
         </div>
     </section>
@@ -91,7 +137,7 @@
                         <span class="text-xs font-bold text-red-500 uppercase tracking-widest bg-red-500/10 px-3 py-1 rounded-full">Mais Econômico</span>
                     </div>
                     <h3 class="text-2xl font-bold mb-3">Transporte Fracionado</h3>
-                    <p class="text-gray-400 mb-6">Solução económica para cargas menores, onde paga apenas pelo espaço utilizado. Ideal para empresas que precisam de flexibilidade e otimização de custos.</p>
+                    <p class="text-gray-400 mb-6">Solução econômica para cargas menores, onde paga apenas pelo espaço utilizado. Ideal para empresas que precisam de flexibilidade e otimização de custos.</p>
                     <ul class="space-y-3">
                         <li class="flex items-center text-sm text-gray-300"><i class="fas fa-check text-red-600 mr-3"></i> Economia de até 40% nos custos</li>
                         <li class="flex items-center text-sm text-gray-300"><i class="fas fa-check text-red-600 mr-3"></i> Rastreio em tempo real</li>
@@ -108,7 +154,7 @@
                         <span class="text-xs font-bold text-red-500 uppercase tracking-widest bg-red-500/10 px-3 py-1 rounded-full">Máxima Agilidade</span>
                     </div>
                     <h3 class="text-2xl font-bold mb-3">Transporte Dedicado</h3>
-                    <p class="text-gray-400 mb-6">Veículo exclusivo para a sua carga, garantindo máxima segurança, agilidade e controlo total sobre o processo de entrega.</p>
+                    <p class="text-gray-400 mb-6">Veículo exclusivo para a sua carga, garantindo máxima segurança, agilidade e controle total sobre o processo de entrega.</p>
                     <ul class="space-y-3">
                         <li class="flex items-center text-sm text-gray-300"><i class="fas fa-check text-red-600 mr-3"></i> Veículo exclusivo</li>
                         <li class="flex items-center text-sm text-gray-300"><i class="fas fa-check text-red-600 mr-3"></i> Prioridade total na entrega</li>
@@ -156,7 +202,7 @@
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-bold mb-4">Serviços Complementares</h2>
-                <p class="text-gray-500">Soluções adicionais para completar a sua experiência logística</p>
+                <p class="text-gray-500">Soluções adicionais para completar sua operação logística</p>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <div class="p-6 text-center group">
@@ -197,7 +243,7 @@
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold mb-4">Onde Operamos</h2>
                 <div class="h-1 w-20 bg-red-600 mx-auto"></div>
-                <p class="text-gray-500 mt-4">Conectando os principais polos económicos do Brasil</p>
+                <p class="text-gray-500 mt-4">Conectando os principais polos econômicos do Brasil</p>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <div class="glass p-8 rounded-2xl text-center card-hover">
@@ -239,7 +285,7 @@
                         <input type="text" id="nome" required class="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:border-red-600 outline-none transition" placeholder="Ex: Logística Brasil Ltda">
                     </div>
                     <div class="space-y-2">
-                        <label class="text-sm font-semibold text-gray-400">Telemóvel/WhatsApp</label>
+                        <label class="text-sm font-semibold text-gray-400">Telefone/WhatsApp</label>
                         <input type="tel" id="telefone" required class="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:border-red-600 outline-none transition" placeholder="(35) 99999-9999">
                     </div>
                     <div class="space-y-2">
@@ -268,11 +314,11 @@
             <div>
                 <span class="text-xl font-extrabold uppercase tracking-tighter">RJ <span class="text-red-600">Lima</span></span>
                 <p class="text-gray-500 mt-4 text-sm leading-relaxed">
-                    A atuar com excelência no setor de transportes desde 2017, conectando empresas e entregando resultados com o máximo de segurança e agilidade.
+                    Atuando com excelência no setor de transportes desde 2017, conectando empresas e entregando resultados com o máximo de segurança e agilidade.
                 </p>
             </div>
             <div>
-                <h4 class="font-bold mb-4 uppercase text-xs tracking-widest text-red-500">Contacto Direto</h4>
+                <h4 class="font-bold mb-4 uppercase text-xs tracking-widest text-red-500">Contato Direto</h4>
                 <ul class="text-gray-400 space-y-3 text-sm">
                     <li class="flex items-center"><i class="fas fa-phone text-red-600 w-6"></i> (35) 99958-1894</li>
                     <li class="flex items-center"><i class="fas fa-envelope text-red-600 w-6"></i> comercial@rjlimatransportes.com.br</li>
@@ -289,7 +335,7 @@
             </div>
         </div>
         <div class="text-center mt-12 text-gray-600 text-xs border-t border-white/5 pt-8">
-            &copy; 2026 RJ Lima Transportes e Logística. Todos os direitos reservados.
+            &copy; <span id="currentYear"></span> RJ Lima Transportes e Logística. Todos os direitos reservados.
         </div>
     </footer>
 

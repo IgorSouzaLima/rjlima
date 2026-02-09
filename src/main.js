@@ -6,9 +6,19 @@ import { showToast } from './shared/components.js'
 function toggleMenu() {
   const nav = document.getElementById('mobile-nav')
   const icon = document.getElementById('menu-icon')
+  if (!nav || !icon) return
   nav.classList.toggle('active')
   icon.classList.toggle('fa-bars')
   icon.classList.toggle('fa-times')
+}
+
+function closeMenu() {
+  const nav = document.getElementById('mobile-nav')
+  const icon = document.getElementById('menu-icon')
+  if (!nav || !icon || !nav.classList.contains('active')) return
+  nav.classList.remove('active')
+  icon.classList.add('fa-bars')
+  icon.classList.remove('fa-times')
 }
 
 // Handle Form submission via EmailJS
@@ -83,4 +93,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Add scroll listener
   window.addEventListener('scroll', handleScroll)
+
+  const currentYear = document.getElementById('currentYear')
+  if (currentYear) {
+    currentYear.textContent = new Date().getFullYear()
+  }
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeMenu()
+    }
+  })
+
+  document.addEventListener('click', (event) => {
+    const nav = document.getElementById('mobile-nav')
+    const button = document.querySelector('button[aria-label="Menu"]')
+    if (!nav || !button || !nav.classList.contains('active')) return
+    if (!nav.contains(event.target) && !button.contains(event.target)) {
+      closeMenu()
+    }
+  })
 })
