@@ -3,322 +3,295 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RJ Lima Transportes e Logística | Soluções Inteligentes</title>
-    <meta name="description" content="RJ Lima Transportes - Transporte seguro e eficiente para os estados de MG, SP, PR e ES. Solicite seu orçamento online.">
+    <title>RJ Lima Transportes e Logística | Transporte Corporativo com Segurança</title>
+    <meta name="description" content="RJ Lima Transportes e Logística: frete fracionado e dedicado para empresas, rastreio em tempo real, gestão de risco e atendimento consultivo em MG, SP, PR e ES.">
+    <meta name="keywords" content="transportadora, logística, transporte de cargas, frete dedicado, frete fracionado, rastreamento de carga">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="RJ Lima Transportes e Logística">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="RJ Lima Transportes e Logística | Transporte Corporativo com Segurança">
+    <meta property="og:description" content="Soluções logísticas para empresas com previsibilidade, monitoramento e suporte 24/7.">
+    <meta property="og:url" content="https://rjlimatransportes.com.br/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RJ Lima Transportes e Logística">
+    <meta name="twitter:description" content="Transporte corporativo com segurança, controle e atendimento especialista.">
+    <link rel="canonical" href="https://rjlimatransportes.com.br/">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "TransportationService",
+          "name": "RJ Lima Transportes e Logística",
+          "url": "https://rjlimatransportes.com.br/",
+          "telephone": "+55-35-99958-1894",
+          "email": "comercial@rjlimatransportes.com.br",
+          "areaServed": ["Minas Gerais", "São Paulo", "Paraná", "Espírito Santo"],
+          "sameAs": [
+            "https://www.instagram.com/rjlimatransportes/",
+            "https://www.facebook.com/RJLimaTransportes?locale=pt_BR",
+            "https://www.linkedin.com/company/rjlima-transportes-e-log%C3%ADstica/?viewAsMember=true"
+          ]
+        }
+    </script>
 </head>
 <body class="bg-black text-white selection:bg-red-500/30">
+    <a href="#conteudo" class="skip-link">Pular para o conteúdo principal</a>
 
-    <!-- Header -->
     <header class="fixed w-full z-50 glass top-0 transition-all duration-300">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center" aria-label="Navegação principal">
             <div class="flex items-center space-x-3">
-                <div class="red-gradient p-2 rounded-lg">
+                <div class="red-gradient p-2 rounded-lg" aria-hidden="true">
                     <i class="fas fa-truck-fast text-white"></i>
                 </div>
                 <span class="text-xl font-extrabold tracking-tighter uppercase">RJ <span class="text-red-600">Lima</span></span>
             </div>
 
-            <!-- Desktop Nav -->
             <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-wider items-center">
                 <a href="#inicio" class="hover:text-red-500 transition">Início</a>
-                <a href="#areas" class="hover:text-red-500 transition">Atuação</a>
                 <a href="#diferenciais" class="hover:text-red-500 transition">Diferenciais</a>
                 <a href="#servicos" class="hover:text-red-500 transition">Serviços</a>
+                <a href="#processo" class="hover:text-red-500 transition">Processo</a>
+                <a href="#faq" class="hover:text-red-500 transition">FAQ</a>
                 <a href="/rastreio/" class="hover:text-red-500 transition">Rastrear</a>
                 <a href="#orcamento" class="bg-red-600 px-6 py-2 rounded-full hover:bg-red-700 transition shadow-lg shadow-red-600/20">Orçamento</a>
             </div>
 
-            <!-- Mobile Menu Button -->
-            <button class="md:hidden text-2xl" aria-label="Menu" onclick="toggleMenu()">
+            <button class="md:hidden text-2xl" aria-label="Menu" aria-expanded="false" onclick="toggleMenu()">
                 <i class="fas fa-bars" id="menu-icon"></i>
             </button>
         </nav>
 
-        <!-- Mobile Nav Dropdown -->
         <div id="mobile-nav" class="mobile-menu absolute top-full left-0 w-full bg-black/98 flex-col p-6 space-y-4 border-t border-white/10 md:hidden shadow-2xl">
             <a href="#inicio" onclick="toggleMenu()" class="text-lg py-2 border-b border-white/5">Início</a>
-            <a href="#areas" onclick="toggleMenu()" class="text-lg py-2 border-b border-white/5">Atuação</a>
             <a href="#diferenciais" onclick="toggleMenu()" class="text-lg py-2 border-b border-white/5">Diferenciais</a>
             <a href="#servicos" onclick="toggleMenu()" class="text-lg py-2 border-b border-white/5">Serviços</a>
+            <a href="#processo" onclick="toggleMenu()" class="text-lg py-2 border-b border-white/5">Processo</a>
+            <a href="#faq" onclick="toggleMenu()" class="text-lg py-2 border-b border-white/5">FAQ</a>
             <a href="/rastreio/" onclick="toggleMenu()" class="text-lg py-2 border-b border-white/5">Rastrear</a>
             <a href="#orcamento" onclick="toggleMenu()" class="text-lg py-2 text-red-500 font-bold">Solicitar Orçamento</a>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="hero-gradient pt-40 pb-20 px-6 min-h-screen flex items-center">
-        <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-6">
-                <span class="text-red-500 font-bold tracking-[0.2em] uppercase text-sm">Logística Inteligente</span>
-                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight">
-                    Transporte corporativo com <br><span class="text-red-600">confiança e performance.</span>
-                </h1>
-                <p class="text-gray-400 text-lg max-w-md">
-                    Operação dedicada para empresas que precisam de previsibilidade, segurança e comunicação clara em cada etapa da entrega.
-                </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#orcamento" class="red-gradient px-8 py-4 rounded-xl font-bold flex items-center shadow-lg shadow-red-900/20 hover:scale-105 transition">
-                        <i class="fas fa-file-invoice-dollar mr-2"></i> Cotar Agora
-                    </a>
-                    <a href="https://wa.me/5535999581894" target="_blank" class="border border-white/15 px-8 py-4 rounded-xl font-bold flex items-center hover:border-red-500 hover:text-red-400 transition">
-                        <i class="fab fa-whatsapp mr-2"></i> Falar com especialista
-                    </a>
-                </div>
-                <div class="grid grid-cols-3 gap-4 pt-4 text-center">
-                    <div class="metric-card">
-                        <p class="text-2xl font-extrabold text-white">+8 anos</p>
-                        <p class="text-xs uppercase tracking-wider text-gray-400">de mercado</p>
+    <main id="conteudo">
+        <section id="inicio" class="hero-gradient pt-40 pb-20 px-6 min-h-screen flex items-center">
+            <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="text-red-500 font-bold tracking-[0.2em] uppercase text-sm">Transportadora corporativa</span>
+                    <h1 class="text-5xl md:text-7xl font-extrabold leading-tight">
+                        Sua operação logística <br><span class="text-red-600">com padrão de grande empresa.</span>
+                    </h1>
+                    <p class="text-gray-300 text-lg max-w-xl">
+                        Soluções de transporte fracionado e dedicado com SLA, gestão de risco e acompanhamento de ponta a ponta para operações B2B.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#orcamento" class="red-gradient px-8 py-4 rounded-xl font-bold flex items-center shadow-lg shadow-red-900/20 hover:scale-105 transition">
+                            <i class="fas fa-file-invoice-dollar mr-2"></i> Solicitar proposta
+                        </a>
+                        <a href="https://wa.me/5535999581894" target="_blank" rel="noopener noreferrer" class="border border-white/15 px-8 py-4 rounded-xl font-bold flex items-center hover:border-red-500 hover:text-red-400 transition">
+                            <i class="fab fa-whatsapp mr-2"></i> Atendimento imediato
+                        </a>
                     </div>
-                    <div class="metric-card">
-                        <p class="text-2xl font-extrabold text-white">4 estados</p>
-                        <p class="text-xs uppercase tracking-wider text-gray-400">de cobertura</p>
-                    </div>
-                    <div class="metric-card">
-                        <p class="text-2xl font-extrabold text-white">24/7</p>
-                        <p class="text-xs uppercase tracking-wider text-gray-400">suporte ativo</p>
-                    </div>
-                </div>
-            </div>
-            <div class="hidden md:block relative">
-                <div class="absolute -inset-10 bg-red-600/10 blur-[100px] rounded-full"></div>
-                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800" alt="Logística RJ Lima" class="rounded-2xl shadow-2xl border border-white/10 truck-float relative z-10">
-            </div>
-        </div>
-    </section>
-
-
-    <section id="diferenciais" class="py-20 bg-zinc-950 border-y border-white/5">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold mb-4">Por que empresas escolhem a RJ Lima</h2>
-                <p class="text-gray-400 max-w-3xl mx-auto">Processo estruturado, comunicação proativa e foco em reduzir riscos da sua operação logística.</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-6">
-                <article class="glass p-7 rounded-2xl border border-white/10">
-                    <i class="fas fa-shield-halved text-red-600 text-2xl mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2">Gestão de risco</h3>
-                    <p class="text-gray-400 text-sm">Acompanhamento de rota e protocolos de segurança para manter sua carga protegida do início ao fim.</p>
-                </article>
-                <article class="glass p-7 rounded-2xl border border-white/10">
-                    <i class="fas fa-route text-red-600 text-2xl mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2">Operação previsível</h3>
-                    <p class="text-gray-400 text-sm">Planejamento logístico com cronograma e atualização frequente para reduzir atrasos e incertezas.</p>
-                </article>
-                <article class="glass p-7 rounded-2xl border border-white/10">
-                    <i class="fas fa-users-gear text-red-600 text-2xl mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2">Atendimento consultivo</h3>
-                    <p class="text-gray-400 text-sm">Equipe preparada para propor soluções sob medida conforme volume, região e urgência da sua operação.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Principais Serviços -->
-    <section id="servicos" class="py-24 bg-black">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">Nossas Soluções</h2>
-                <div class="h-1 w-20 bg-red-600 mx-auto mb-6"></div>
-                <p class="text-gray-400 max-w-2xl mx-auto">Oferecemos uma gama completa de serviços logísticos desenhados para otimizar sua cadeia de suprimentos.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Transporte Fracionado -->
-                <div class="glass p-8 rounded-3xl card-hover border border-white/5">
-                    <div class="flex items-start justify-between mb-6">
-                        <div class="bg-red-600/10 p-4 rounded-2xl">
-                            <i class="fas fa-boxes-stacked text-3xl text-red-600"></i>
+                    <div class="grid grid-cols-3 gap-4 pt-4 text-center">
+                        <div class="metric-card">
+                            <p class="text-2xl font-extrabold text-white">+8 anos</p>
+                            <p class="text-xs uppercase tracking-wider text-gray-400">de mercado</p>
                         </div>
-                        <span class="text-xs font-bold text-red-500 uppercase tracking-widest bg-red-500/10 px-3 py-1 rounded-full">Mais Econômico</span>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Transporte Fracionado</h3>
-                    <p class="text-gray-400 mb-6">Solução econômica para cargas menores, onde paga apenas pelo espaço utilizado. Ideal para empresas que precisam de flexibilidade e otimização de custos.</p>
-                    <ul class="space-y-3">
-                        <li class="flex items-center text-sm text-gray-300"><i class="fas fa-check text-red-600 mr-3"></i> Economia de até 40% nos custos</li>
-                        <li class="flex items-center text-sm text-gray-300"><i class="fas fa-check text-red-600 mr-3"></i> Rastreio em tempo real</li>
-                        <li class="flex items-center text-sm text-gray-300"><i class="fas fa-check text-red-600 mr-3"></i> Seguro total da carga</li>
-                    </ul>
-                </div>
-
-                <!-- Transporte Dedicado -->
-                <div class="glass p-8 rounded-3xl card-hover border border-white/5">
-                    <div class="flex items-start justify-between mb-6">
-                        <div class="bg-red-600/10 p-4 rounded-2xl">
-                            <i class="fas fa-truck-fast text-3xl text-red-600"></i>
+                        <div class="metric-card">
+                            <p class="text-2xl font-extrabold text-white">4 estados</p>
+                            <p class="text-xs uppercase tracking-wider text-gray-400">de cobertura</p>
                         </div>
-                        <span class="text-xs font-bold text-red-500 uppercase tracking-widest bg-red-500/10 px-3 py-1 rounded-full">Máxima Agilidade</span>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Transporte Dedicado</h3>
-                    <p class="text-gray-400 mb-6">Veículo exclusivo para a sua carga, garantindo máxima segurança, agilidade e controle total sobre o processo de entrega.</p>
-                    <ul class="space-y-3">
-                        <li class="flex items-center text-sm text-gray-300"><i class="fas fa-check text-red-600 mr-3"></i> Veículo exclusivo</li>
-                        <li class="flex items-center text-sm text-gray-300"><i class="fas fa-check text-red-600 mr-3"></i> Prioridade total na entrega</li>
-                        <li class="flex items-center text-sm text-gray-300"><i class="fas fa-check text-red-600 mr-3"></i> Flexibilidade total de horários</li>
-                    </ul>
-                </div>
-
-                <!-- Transferência Empresarial -->
-                <div class="glass p-8 rounded-3xl card-hover border border-white/5">
-                    <div class="flex items-start justify-between mb-6">
-                        <div class="bg-red-600/10 p-4 rounded-2xl">
-                            <i class="fas fa-shuffle text-3xl text-red-600"></i>
+                        <div class="metric-card">
+                            <p class="text-2xl font-extrabold text-white">24/7</p>
+                            <p class="text-xs uppercase tracking-wider text-gray-400">suporte ativo</p>
                         </div>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3">Transferência Empresarial</h3>
-                    <p class="text-gray-400 mb-6">Movimentação eficiente entre filiais, centros de distribuição e pontos estratégicos da sua empresa com rotas planeadas.</p>
-                    <ul class="space-y-3">
-                        <li class="flex items-center text-sm text-gray-300"><i class="fas fa-check text-red-600 mr-3"></i> Rotas otimizadas</li>
-                        <li class="flex items-center text-sm text-gray-300"><i class="fas fa-check text-red-600 mr-3"></i> Agendamento flexível</li>
-                        <li class="flex items-center text-sm text-gray-300"><i class="fas fa-check text-red-600 mr-3"></i> Relatórios detalhados de tráfego</li>
-                    </ul>
+                </div>
+                <div class="hidden md:block relative">
+                    <div class="absolute -inset-10 bg-red-600/10 blur-[100px] rounded-full"></div>
+                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1000" alt="Caminhão de transporte em operação logística" class="rounded-2xl shadow-2xl border border-white/10 truck-float relative z-10" fetchpriority="high" decoding="async">
+                </div>
+            </div>
+        </section>
+
+        <section class="py-10 bg-zinc-950 border-y border-white/5">
+            <div class="container mx-auto px-6">
+                <p class="text-center text-xs uppercase tracking-[0.18em] text-gray-500 mb-6">Parceiro de operações empresariais em diversos segmentos</p>
+                <div class="grid md:grid-cols-4 gap-4 text-sm text-gray-300">
+                    <div class="trust-badge"><i class="fas fa-industry"></i> Indústria</div>
+                    <div class="trust-badge"><i class="fas fa-store"></i> Varejo</div>
+                    <div class="trust-badge"><i class="fas fa-prescription-bottle-medical"></i> Farmacêutico</div>
+                    <div class="trust-badge"><i class="fas fa-bolt"></i> E-commerce</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="diferenciais" class="py-20 bg-zinc-950">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold mb-4">Diferenciais de uma operação de alto desempenho</h2>
+                    <p class="text-gray-400 max-w-3xl mx-auto">Estrutura, processos e governança logística para manter o seu negócio no prazo e com risco reduzido.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <article class="glass p-7 rounded-2xl border border-white/10">
+                        <i class="fas fa-shield-halved text-red-600 text-2xl mb-4"></i>
+                        <h3 class="font-bold text-xl mb-2">Gestão de risco</h3>
+                        <p class="text-gray-400 text-sm">Protocolos operacionais e monitoramento contínuo para máxima segurança de carga e rota.</p>
+                    </article>
+                    <article class="glass p-7 rounded-2xl border border-white/10">
+                        <i class="fas fa-route text-red-600 text-2xl mb-4"></i>
+                        <h3 class="font-bold text-xl mb-2">Previsibilidade operacional</h3>
+                        <p class="text-gray-400 text-sm">Planejamento logístico com checkpoints e comunicação proativa durante toda a jornada.</p>
+                    </article>
+                    <article class="glass p-7 rounded-2xl border border-white/10">
+                        <i class="fas fa-users-gear text-red-600 text-2xl mb-4"></i>
+                        <h3 class="font-bold text-xl mb-2">Atendimento consultivo</h3>
+                        <p class="text-gray-400 text-sm">Equipe experiente para desenhar a solução ideal conforme perfil da sua operação.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="py-24 bg-black">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">Soluções logísticas completas</h2>
+                    <div class="h-1 w-20 bg-red-600 mx-auto mb-6"></div>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Portfólio desenhado para operações que exigem custo competitivo, agilidade e controle.</p>
                 </div>
 
-                <!-- Soluções Personalizadas -->
-                <div class="glass p-8 rounded-3xl card-hover border border-white/5">
-                    <div class="flex items-start justify-between mb-6">
-                        <div class="bg-red-600/10 p-4 rounded-2xl">
-                            <i class="fas fa-handshake text-3xl text-red-600"></i>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="glass p-8 rounded-3xl card-hover border border-white/5">
+                        <div class="flex items-start justify-between mb-6">
+                            <div class="bg-red-600/10 p-4 rounded-2xl"><i class="fas fa-boxes-stacked text-3xl text-red-600"></i></div>
+                            <span class="text-xs font-bold text-red-500 uppercase tracking-widest bg-red-500/10 px-3 py-1 rounded-full">Mais econômico</span>
                         </div>
+                        <h3 class="text-2xl font-bold mb-3">Transporte Fracionado</h3>
+                        <p class="text-gray-400 mb-6">Compartilhamento inteligente de capacidade para redução de custos sem perder qualidade de entrega.</p>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3">Soluções Personalizadas</h3>
-                    <p class="text-gray-400 mb-6">Logística sob medida para atender às necessidades específicas e complexas do seu negócio, independentemente do setor.</p>
-                    <ul class="space-y-3">
-                        <li class="flex items-center text-sm text-gray-300"><i class="fas fa-check text-red-600 mr-3"></i> Consultoria especializada</li>
-                        <li class="flex items-center text-sm text-gray-300"><i class="fas fa-check text-red-600 mr-3"></i> Projeto customizado (Tailor-made)</li>
-                        <li class="flex items-center text-sm text-gray-300"><i class="fas fa-check text-red-600 mr-3"></i> Suporte dedicado 24h</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Serviços Complementares -->
-    <section class="py-24 bg-zinc-950">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Serviços Complementares</h2>
-                <p class="text-gray-500">Soluções adicionais para completar sua operação logística</p>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="p-6 text-center group">
-                    <div class="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-red-600 transition-colors">
-                        <i class="fas fa-warehouse text-2xl text-red-600 group-hover:text-white"></i>
+                    <div class="glass p-8 rounded-3xl card-hover border border-white/5">
+                        <div class="flex items-start justify-between mb-6">
+                            <div class="bg-red-600/10 p-4 rounded-2xl"><i class="fas fa-truck-fast text-3xl text-red-600"></i></div>
+                            <span class="text-xs font-bold text-red-500 uppercase tracking-widest bg-red-500/10 px-3 py-1 rounded-full">Máxima agilidade</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Transporte Dedicado</h3>
+                        <p class="text-gray-400 mb-6">Veículo exclusivo para operações críticas com prioridade total e janelas de entrega controladas.</p>
                     </div>
-                    <h4 class="font-bold text-lg">Armazenagem</h4>
-                    <p class="text-xs text-gray-500 mt-2">Stock seguro e organizado</p>
-                </div>
-                <div class="p-6 text-center group">
-                    <div class="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-red-600 transition-colors">
-                        <i class="fas fa-box-open text-2xl text-red-600 group-hover:text-white"></i>
-                    </div>
-                    <h4 class="font-bold text-lg">Embalagem</h4>
-                    <p class="text-xs text-gray-500 mt-2">Proteção adequada da carga</p>
-                </div>
-                <div class="p-6 text-center group">
-                    <div class="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-red-600 transition-colors">
-                        <i class="fas fa-file-signature text-2xl text-red-600 group-hover:text-white"></i>
-                    </div>
-                    <h4 class="font-bold text-lg">Documentação</h4>
-                    <p class="text-xs text-gray-500 mt-2">Gestão completa de documentos</p>
-                </div>
-                <div class="p-6 text-center group">
-                    <div class="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-red-600 transition-colors">
-                        <i class="fas fa-headset text-2xl text-red-600 group-hover:text-white"></i>
-                    </div>
-                    <h4 class="font-bold text-lg">Suporte 24/7</h4>
-                    <p class="text-xs text-gray-500 mt-2">Atendimento sempre disponível</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Áreas de Atuação -->
-    <section id="areas" class="py-24 bg-black">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">Onde Operamos</h2>
-                <div class="h-1 w-20 bg-red-600 mx-auto"></div>
-                <p class="text-gray-500 mt-4">Conectando os principais polos econômicos do Brasil</p>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="glass p-8 rounded-2xl text-center card-hover">
-                    <i class="fas fa-map-location-dot text-red-600 text-3xl mb-4"></i>
-                    <h3 class="font-bold">Minas Gerais</h3>
-                    <p class="text-xs text-gray-500 mt-2 uppercase tracking-widest">Base Central</p>
-                </div>
-                <div class="glass p-8 rounded-2xl text-center card-hover">
-                    <i class="fas fa-city text-red-600 text-3xl mb-4"></i>
-                    <h3 class="font-bold">São Paulo</h3>
-                    <p class="text-xs text-gray-500 mt-2 uppercase tracking-widest">Capital e Interior</p>
-                </div>
-                <div class="glass p-8 rounded-2xl text-center card-hover">
-                    <i class="fas fa-anchor text-red-600 text-3xl mb-4"></i>
-                    <h3 class="font-bold">Paraná</h3>
-                    <p class="text-xs text-gray-500 mt-2 uppercase tracking-widest">Rotas Sul</p>
-                </div>
-                <div class="glass p-8 rounded-2xl text-center card-hover">
-                    <i class="fas fa-sun text-red-600 text-3xl mb-4"></i>
-                    <h3 class="font-bold">Espírito Santo</h3>
-                    <p class="text-xs text-gray-500 mt-2 uppercase tracking-widest">Portos e Carga</p>
+                    <div class="glass p-8 rounded-3xl card-hover border border-white/5">
+                        <div class="bg-red-600/10 p-4 rounded-2xl w-fit mb-6"><i class="fas fa-shuffle text-3xl text-red-600"></i></div>
+                        <h3 class="text-2xl font-bold mb-3">Transferência entre unidades</h3>
+                        <p class="text-gray-400 mb-6">Movimentação estratégica entre filiais, CDs e hubs com roteirização otimizada.</p>
+                    </div>
+
+                    <div class="glass p-8 rounded-3xl card-hover border border-white/5">
+                        <div class="bg-red-600/10 p-4 rounded-2xl w-fit mb-6"><i class="fas fa-handshake text-3xl text-red-600"></i></div>
+                        <h3 class="text-2xl font-bold mb-3">Projetos personalizados</h3>
+                        <p class="text-gray-400 mb-6">Soluções sob medida para demandas especiais, picos sazonais e operações complexas.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Orçamento -->
-    <section id="orcamento" class="py-24 bg-zinc-950">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto glass p-10 rounded-3xl relative overflow-hidden">
-                <div class="absolute top-0 right-0 p-10 opacity-10 pointer-events-none">
-                    <i class="fas fa-truck-ramp-box text-9xl"></i>
+        <section id="processo" class="py-24 bg-zinc-950 border-y border-white/5">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-14">
+                    <h2 class="text-4xl font-bold mb-4">Como funciona nossa operação</h2>
+                    <p class="text-gray-400">Fluxo claro para garantir previsibilidade e performance de ponta a ponta.</p>
                 </div>
-                <h2 class="text-3xl font-bold mb-8">Solicite uma Cotação Expressa</h2>
-
-                <form id="quoteForm" class="grid md:grid-cols-2 gap-6 relative z-10">
-                    <div class="space-y-2">
-                        <label class="text-sm font-semibold text-gray-400">Empresa / Nome</label>
-                        <input type="text" id="nome" required class="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:border-red-600 outline-none transition" placeholder="Ex: Logística Brasil Ltda">
-                    </div>
-                    <div class="space-y-2">
-                        <label class="text-sm font-semibold text-gray-400">Telefone/WhatsApp</label>
-                        <input type="tel" id="telefone" required class="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:border-red-600 outline-none transition" placeholder="(35) 99999-9999">
-                    </div>
-                    <div class="space-y-2">
-                        <label class="text-sm font-semibold text-gray-400">Origem</label>
-                        <input type="text" id="origem" required class="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:border-red-600 outline-none transition" placeholder="Cidade / Estado">
-                    </div>
-                    <div class="space-y-2">
-                        <label class="text-sm font-semibold text-gray-400">Destino</label>
-                        <input type="text" id="destino" required class="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:border-red-600 outline-none transition" placeholder="Cidade / Estado">
-                    </div>
-                    <div class="md:col-span-2 space-y-2">
-                        <label class="text-sm font-semibold text-gray-400">Descrição da Carga</label>
-                        <textarea id="descricao" required class="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:border-red-600 outline-none transition h-32" placeholder="Descreva o que será transportado, peso aproximado e dimensões..."></textarea>
-                    </div>
-                    <button type="submit" class="md:col-span-2 red-gradient py-4 rounded-xl font-bold hover:scale-[1.01] active:scale-95 transition shadow-xl shadow-red-900/30">
-                        <i class="fas fa-paper-plane mr-2"></i> Solicitar Orçamento
-                    </button>
-                </form>
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="step-card"><span>01</span><h3>Briefing</h3><p>Levantamento técnico da necessidade logística.</p></div>
+                    <div class="step-card"><span>02</span><h3>Plano de rota</h3><p>Definição operacional com janelas e SLA.</p></div>
+                    <div class="step-card"><span>03</span><h3>Execução</h3><p>Transporte com monitoramento e comunicação ativa.</p></div>
+                    <div class="step-card"><span>04</span><h3>Entrega</h3><p>Comprovação de entrega e suporte pós-operação.</p></div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
+        <section id="areas" class="py-24 bg-black">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">Onde operamos</h2>
+                    <div class="h-1 w-20 bg-red-600 mx-auto"></div>
+                    <p class="text-gray-500 mt-4">Atuação estratégica nos principais polos logísticos do Sudeste e Sul.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="glass p-8 rounded-2xl text-center card-hover"><i class="fas fa-map-location-dot text-red-600 text-3xl mb-4"></i><h3 class="font-bold">Minas Gerais</h3></div>
+                    <div class="glass p-8 rounded-2xl text-center card-hover"><i class="fas fa-city text-red-600 text-3xl mb-4"></i><h3 class="font-bold">São Paulo</h3></div>
+                    <div class="glass p-8 rounded-2xl text-center card-hover"><i class="fas fa-anchor text-red-600 text-3xl mb-4"></i><h3 class="font-bold">Paraná</h3></div>
+                    <div class="glass p-8 rounded-2xl text-center card-hover"><i class="fas fa-sun text-red-600 text-3xl mb-4"></i><h3 class="font-bold">Espírito Santo</h3></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="py-24 bg-zinc-950">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold mb-4">Perguntas frequentes</h2>
+                    <p class="text-gray-400">Respostas rápidas para agilizar a contratação da sua operação.</p>
+                </div>
+                <div class="space-y-4 faq-list">
+                    <details class="glass p-6 rounded-2xl"><summary>Vocês atendem contratos recorrentes para empresas?</summary><p>Sim. Estruturamos operação contínua com rotas fixas, acompanhamento de indicadores e atendimento dedicado.</p></details>
+                    <details class="glass p-6 rounded-2xl"><summary>É possível rastrear a carga em tempo real?</summary><p>Sim. Disponibilizamos rastreio e atualizações operacionais durante todo o processo.</p></details>
+                    <details class="glass p-6 rounded-2xl"><summary>Em quanto tempo recebo o orçamento?</summary><p>No atendimento comercial, o retorno inicial é rápido e a proposta técnica é enviada conforme escopo da operação.</p></details>
+                </div>
+            </div>
+        </section>
+
+        <section id="orcamento" class="py-24 bg-black">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto glass p-10 rounded-3xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-10 opacity-10 pointer-events-none"><i class="fas fa-truck-ramp-box text-9xl"></i></div>
+                    <h2 class="text-3xl font-bold mb-8">Solicite uma cotação expressa</h2>
+
+                    <form id="quoteForm" class="grid md:grid-cols-2 gap-6 relative z-10">
+                        <input type="text" name="empresa_site" class="hidden" tabindex="-1" autocomplete="off">
+                        <div class="space-y-2">
+                            <label for="nome" class="text-sm font-semibold text-gray-400">Empresa / Nome</label>
+                            <input type="text" id="nome" name="nome" required autocomplete="name" class="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:border-red-600 outline-none transition" placeholder="Ex: Logística Brasil Ltda">
+                        </div>
+                        <div class="space-y-2">
+                            <label for="telefone" class="text-sm font-semibold text-gray-400">Telefone/WhatsApp</label>
+                            <input type="tel" id="telefone" name="telefone" required autocomplete="tel" class="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:border-red-600 outline-none transition" placeholder="(35) 99999-9999">
+                        </div>
+                        <div class="space-y-2">
+                            <label for="origem" class="text-sm font-semibold text-gray-400">Origem</label>
+                            <input type="text" id="origem" name="origem" required autocomplete="address-level2" class="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:border-red-600 outline-none transition" placeholder="Cidade / Estado">
+                        </div>
+                        <div class="space-y-2">
+                            <label for="destino" class="text-sm font-semibold text-gray-400">Destino</label>
+                            <input type="text" id="destino" name="destino" required autocomplete="address-level2" class="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:border-red-600 outline-none transition" placeholder="Cidade / Estado">
+                        </div>
+                        <div class="md:col-span-2 space-y-2">
+                            <label for="descricao" class="text-sm font-semibold text-gray-400">Descrição da carga</label>
+                            <textarea id="descricao" name="descricao" required class="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:border-red-600 outline-none transition h-32" placeholder="Informe tipo de carga, peso aproximado, dimensões e urgência."></textarea>
+                        </div>
+                        <button type="submit" class="md:col-span-2 red-gradient py-4 rounded-xl font-bold hover:scale-[1.01] active:scale-95 transition shadow-xl shadow-red-900/30">
+                            <i class="fas fa-paper-plane mr-2"></i> Solicitar orçamento
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer class="bg-black border-t border-white/10 py-12">
-        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-12">
+        <div class="container mx-auto px-6 grid md:grid-cols-4 gap-10">
             <div>
                 <span class="text-xl font-extrabold uppercase tracking-tighter">RJ <span class="text-red-600">Lima</span></span>
-                <p class="text-gray-500 mt-4 text-sm leading-relaxed">
-                    Atuando com excelência no setor de transportes desde 2017, conectando empresas e entregando resultados com o máximo de segurança e agilidade.
-                </p>
+                <p class="text-gray-500 mt-4 text-sm leading-relaxed">Transportadora focada em eficiência, segurança e comunicação para operações empresariais de alto nível.</p>
             </div>
             <div>
-                <h4 class="font-bold mb-4 uppercase text-xs tracking-widest text-red-500">Contato Direto</h4>
+                <h4 class="font-bold mb-4 uppercase text-xs tracking-widest text-red-500">Contato direto</h4>
                 <ul class="text-gray-400 space-y-3 text-sm">
                     <li class="flex items-center"><i class="fas fa-phone text-red-600 w-6"></i> (35) 99958-1894</li>
                     <li class="flex items-center"><i class="fas fa-envelope text-red-600 w-6"></i> comercial@rjlimatransportes.com.br</li>
@@ -326,11 +299,20 @@
                 </ul>
             </div>
             <div>
+                <h4 class="font-bold mb-4 uppercase text-xs tracking-widest text-red-500">Navegação</h4>
+                <ul class="text-sm text-gray-400 space-y-2">
+                    <li><a href="#diferenciais" class="hover:text-red-500">Diferenciais</a></li>
+                    <li><a href="#servicos" class="hover:text-red-500">Serviços</a></li>
+                    <li><a href="#orcamento" class="hover:text-red-500">Orçamento</a></li>
+                    <li><a href="/rastreio/" class="hover:text-red-500">Rastreio</a></li>
+                </ul>
+            </div>
+            <div>
                 <h4 class="font-bold mb-4 uppercase text-xs tracking-widest text-red-500">Siga-nos</h4>
                 <div class="flex space-x-4">
-                    <a href="https://www.instagram.com/rjlimatransportes/" target="_blank" class="w-10 h-10 glass flex items-center justify-center rounded-full hover:bg-red-600 transition"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/RJLimaTransportes?locale=pt_BR" target="_blank" class="w-10 h-10 glass flex items-center justify-center rounded-full hover:bg-red-600 transition"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.linkedin.com/company/rjlima-transportes-e-log%C3%ADstica/?viewAsMember=true" target="_blank" class="w-10 h-10 glass flex items-center justify-center rounded-full hover:bg-red-600 transition"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/rjlimatransportes/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-10 h-10 glass flex items-center justify-center rounded-full hover:bg-red-600 transition"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/RJLimaTransportes?locale=pt_BR" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-10 h-10 glass flex items-center justify-center rounded-full hover:bg-red-600 transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/company/rjlima-transportes-e-log%C3%ADstica/?viewAsMember=true" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-10 h-10 glass flex items-center justify-center rounded-full hover:bg-red-600 transition"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
@@ -339,8 +321,7 @@
         </div>
     </footer>
 
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/5535999581894" target="_blank" class="fixed bottom-6 right-6 bg-green-500 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-90 transition z-50">
+    <a href="https://wa.me/5535999581894" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp" class="fixed bottom-6 right-6 bg-green-500 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-90 transition z-50">
         <i class="fab fa-whatsapp text-3xl"></i>
     </a>
 

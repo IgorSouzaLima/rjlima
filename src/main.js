@@ -6,8 +6,12 @@ import { showToast } from './shared/components.js'
 function toggleMenu() {
   const nav = document.getElementById('mobile-nav')
   const icon = document.getElementById('menu-icon')
+  const button = document.querySelector('button[aria-label="Menu"]')
   if (!nav || !icon) return
   nav.classList.toggle('active')
+  if (button) {
+    button.setAttribute('aria-expanded', String(nav.classList.contains('active')))
+  }
   icon.classList.toggle('fa-bars')
   icon.classList.toggle('fa-times')
 }
@@ -15,8 +19,12 @@ function toggleMenu() {
 function closeMenu() {
   const nav = document.getElementById('mobile-nav')
   const icon = document.getElementById('menu-icon')
+  const button = document.querySelector('button[aria-label="Menu"]')
   if (!nav || !icon || !nav.classList.contains('active')) return
   nav.classList.remove('active')
+  if (button) {
+    button.setAttribute('aria-expanded', 'false')
+  }
   icon.classList.add('fa-bars')
   icon.classList.remove('fa-times')
 }
@@ -24,6 +32,9 @@ function closeMenu() {
 // Handle Form submission via EmailJS
 async function handleFormSubmit(e) {
   e.preventDefault()
+
+  const honeypot = e.target.querySelector('input[name="empresa_site"]')
+  if (honeypot?.value) return
 
   const nome = document.getElementById('nome').value
   const tel = document.getElementById('telefone').value
