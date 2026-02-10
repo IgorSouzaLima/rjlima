@@ -6,9 +6,12 @@ import { showToast } from './shared/components.js'
 function toggleMenu() {
   const nav = document.getElementById('mobile-nav')
   const icon = document.getElementById('menu-icon')
-  nav.classList.toggle('active')
-  icon.classList.toggle('fa-bars')
-  icon.classList.toggle('fa-times')
+  if (!nav || !icon) return
+
+  const isOpen = nav.classList.toggle('active')
+  document.body.classList.toggle('menu-open', isOpen)
+  icon.classList.toggle('fa-bars', !isOpen)
+  icon.classList.toggle('fa-times', isOpen)
 }
 
 // Handle Form submission via EmailJS
@@ -83,4 +86,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Add scroll listener
   window.addEventListener('scroll', handleScroll)
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768) {
+      const nav = document.getElementById('mobile-nav')
+      const icon = document.getElementById('menu-icon')
+      nav?.classList.remove('active')
+      document.body.classList.remove('menu-open')
+      icon?.classList.add('fa-bars')
+      icon?.classList.remove('fa-times')
+    }
+  })
 })

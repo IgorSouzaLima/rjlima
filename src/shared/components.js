@@ -100,18 +100,18 @@ export function createHeader({ showTrackingLink = true, isAdmin = false } = {}) 
           ${navLinks}
         </div>
 
-        <button class="md:hidden text-2xl" aria-label="Menu" onclick="toggleMobileMenu()">
+        <button class="md:hidden text-2xl p-2 rounded-lg hover:bg-white/5 transition" aria-label="Menu" onclick="toggleMobileMenu()">
           <i class="fas fa-bars" id="mobile-menu-icon"></i>
         </button>
       </nav>
 
-      <div id="mobile-nav" class="mobile-menu fixed top-[73px] left-0 w-full bg-black/98 flex-col p-6 space-y-4 border-t border-white/10 md:hidden shadow-2xl z-[60] max-h-[calc(100vh-73px)] overflow-y-auto">
+      <div id="mobile-nav" class="mobile-menu fixed top-[73px] left-4 right-4 bg-zinc-950/95 backdrop-blur-md flex-col p-5 space-y-3 border border-white/10 rounded-2xl md:hidden shadow-2xl z-[60] max-h-[calc(100vh-90px)] overflow-y-auto">
         ${isAdmin
-          ? `<a href="/admin/" onclick="toggleMobileMenu()" class="text-lg py-2 border-b border-white/5">Dashboard</a>
-             <button onclick="handleLogout()" class="text-lg py-2 text-red-500 font-bold text-left">Sair</button>`
-          : `<a href="/" onclick="toggleMobileMenu()" class="text-lg py-2 border-b border-white/5">Inicio</a>
-             ${showTrackingLink ? '<a href="/rastreio/" onclick="toggleMobileMenu()" class="text-lg py-2 border-b border-white/5">Rastrear</a>' : ''}
-             <a href="/#orcamento" onclick="toggleMobileMenu()" class="text-lg py-2 text-red-500 font-bold">Solicitar Orcamento</a>`
+          ? `<a href="/admin/" onclick="toggleMobileMenu()" class="text-base py-2.5 px-2 rounded-lg border-b border-white/5 hover:bg-white/5 transition">Dashboard</a>
+             <button onclick="handleLogout()" class="text-base py-2.5 px-2 rounded-lg text-red-500 font-bold text-left hover:bg-red-600/10 transition">Sair</button>`
+          : `<a href="/" onclick="toggleMobileMenu()" class="text-base py-2.5 px-2 rounded-lg border-b border-white/5 hover:bg-white/5 transition">Inicio</a>
+             ${showTrackingLink ? '<a href="/rastreio/" onclick="toggleMobileMenu()" class="text-base py-2.5 px-2 rounded-lg border-b border-white/5 hover:bg-white/5 transition">Rastrear</a>' : ''}
+             <a href="/#orcamento" onclick="toggleMobileMenu()" class="text-base py-2.5 px-2 rounded-lg text-red-500 font-bold hover:bg-red-600/10 transition">Solicitar Orcamento</a>`
         }
       </div>
     </header>
@@ -138,15 +138,27 @@ export function createFooter() {
 export function toggleMobileMenu() {
   const nav = document.getElementById('mobile-nav')
   const icon = document.getElementById('mobile-menu-icon')
-  if (nav && icon) {
-    nav.classList.toggle('active')
-    icon.classList.toggle('fa-bars')
-    icon.classList.toggle('fa-times')
-  }
+  if (!nav || !icon) return
+
+  const isOpen = nav.classList.toggle('active')
+  document.body.classList.toggle('menu-open', isOpen)
+  icon.classList.toggle('fa-bars', !isOpen)
+  icon.classList.toggle('fa-times', isOpen)
 }
 
 // Expose toggle function globally
 if (typeof window !== 'undefined') {
   // @ts-ignore
   window.toggleMobileMenu = toggleMobileMenu
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768) {
+      const nav = document.getElementById('mobile-nav')
+      const icon = document.getElementById('mobile-menu-icon')
+      nav?.classList.remove('active')
+      document.body.classList.remove('menu-open')
+      icon?.classList.add('fa-bars')
+      icon?.classList.remove('fa-times')
+    }
+  })
 }

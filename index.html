@@ -33,18 +33,18 @@
             </div>
 
             <!-- Mobile Menu Button -->
-            <button class="md:hidden text-2xl" aria-label="Menu" onclick="toggleMenu()">
+            <button class="md:hidden text-2xl p-2 rounded-lg hover:bg-white/5 transition" aria-label="Menu" onclick="toggleMenu()">
                 <i class="fas fa-bars" id="menu-icon"></i>
             </button>
         </nav>
 
         <!-- Mobile Nav Dropdown -->
-        <div id="mobile-nav" class="mobile-menu fixed top-[73px] left-0 w-full bg-black/98 flex-col p-6 space-y-4 border-t border-white/10 md:hidden shadow-2xl z-[60] max-h-[calc(100vh-73px)] overflow-y-auto">
-            <a href="#inicio" onclick="toggleMenu()" class="text-lg py-2 border-b border-white/5">Início</a>
-            <a href="#areas" onclick="toggleMenu()" class="text-lg py-2 border-b border-white/5">Atuação</a>
-            <a href="#servicos" onclick="toggleMenu()" class="text-lg py-2 border-b border-white/5">Serviços</a>
-            <a href="/rastreio/" onclick="toggleMenu()" class="text-lg py-2 border-b border-white/5">Rastrear</a>
-            <a href="#orcamento" onclick="toggleMenu()" class="text-lg py-2 text-red-500 font-bold">Solicitar Orçamento</a>
+        <div id="mobile-nav" class="mobile-menu fixed top-[73px] left-4 right-4 bg-zinc-950/95 backdrop-blur-md flex-col p-5 space-y-3 border border-white/10 rounded-2xl md:hidden shadow-2xl z-[60] max-h-[calc(100vh-90px)] overflow-y-auto">
+            <a href="#inicio" onclick="toggleMenu()" class="text-base py-2.5 px-2 rounded-lg border-b border-white/5 hover:bg-white/5 transition">Início</a>
+            <a href="#areas" onclick="toggleMenu()" class="text-base py-2.5 px-2 rounded-lg border-b border-white/5 hover:bg-white/5 transition">Atuação</a>
+            <a href="#servicos" onclick="toggleMenu()" class="text-base py-2.5 px-2 rounded-lg border-b border-white/5 hover:bg-white/5 transition">Serviços</a>
+            <a href="/rastreio/" onclick="toggleMenu()" class="text-base py-2.5 px-2 rounded-lg border-b border-white/5 hover:bg-white/5 transition">Rastrear</a>
+            <a href="#orcamento" onclick="toggleMenu()" class="text-base py-2.5 px-2 rounded-lg text-red-500 font-bold hover:bg-red-600/10 transition">Solicitar Orçamento</a>
         </div>
     </header>
 
