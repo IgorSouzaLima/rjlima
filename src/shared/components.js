@@ -105,13 +105,13 @@ export function createHeader({ showTrackingLink = true, isAdmin = false } = {}) 
         </button>
       </nav>
 
-      <div id="mobile-nav" class="mobile-menu absolute top-full left-0 w-full bg-black/98 flex-col p-6 space-y-4 border-t border-white/10 md:hidden shadow-2xl">
+      <div id="mobile-nav" class="mobile-menu fixed top-[73px] left-0 w-full bg-black/98 flex-col p-6 space-y-4 border-t border-white/10 md:hidden shadow-2xl max-h-[calc(100vh-73px)] overflow-y-auto">
         ${isAdmin
-          ? `<a href="/admin/" class="text-lg py-2 border-b border-white/5">Dashboard</a>
+          ? `<a href="/admin/" onclick="toggleMobileMenu()" class="text-lg py-2 border-b border-white/5">Dashboard</a>
              <button onclick="handleLogout()" class="text-lg py-2 text-red-500 font-bold text-left">Sair</button>`
-          : `<a href="/" class="text-lg py-2 border-b border-white/5">Inicio</a>
-             ${showTrackingLink ? '<a href="/rastreio/" class="text-lg py-2 border-b border-white/5">Rastrear</a>' : ''}
-             <a href="/#orcamento" class="text-lg py-2 text-red-500 font-bold">Solicitar Orcamento</a>`
+          : `<a href="/" onclick="toggleMobileMenu()" class="text-lg py-2 border-b border-white/5">Inicio</a>
+             ${showTrackingLink ? '<a href="/rastreio/" onclick="toggleMobileMenu()" class="text-lg py-2 border-b border-white/5">Rastrear</a>' : ''}
+             <a href="/#orcamento" onclick="toggleMobileMenu()" class="text-lg py-2 text-red-500 font-bold">Solicitar Orcamento</a>`
         }
       </div>
     </header>
