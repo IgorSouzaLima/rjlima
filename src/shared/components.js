@@ -105,7 +105,7 @@ export function createHeader({ showTrackingLink = true, isAdmin = false } = {}) 
         </button>
       </nav>
 
-      <div id="mobile-nav" class="mobile-menu fixed top-[73px] left-0 w-full bg-black/98 flex-col p-6 space-y-4 border-t border-white/10 md:hidden shadow-2xl max-h-[calc(100vh-73px)] overflow-y-auto">
+      <div id="mobile-nav" class="mobile-menu fixed top-[73px] left-0 w-full bg-black/98 flex-col p-6 space-y-4 border-t border-white/10 md:hidden shadow-2xl z-[60] max-h-[calc(100vh-73px)] overflow-y-auto">
         ${isAdmin
           ? `<a href="/admin/" onclick="toggleMobileMenu()" class="text-lg py-2 border-b border-white/5">Dashboard</a>
              <button onclick="handleLogout()" class="text-lg py-2 text-red-500 font-bold text-left">Sair</button>`
