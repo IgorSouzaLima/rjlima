@@ -533,65 +533,41 @@ async function handleFormSubmit(e) {
       proof_photo_url: existingPhotoUrl.value || null
     }
 
-    // Handle photo upload
-    const photoFile = photoInput.files?.[0]
-    if (photoFile) {
-      // Need to create/update invoice first to get ID
-      let targetId = invoiceId
+    // Create or update invoice first
+    let targetId = invoiceId
 
-      if (!isEditing) {
-        // Create invoice first
-        const { data: newInvoice, error: createError } = await createInvoice(invoiceData)
-        if (createError || !newInvoice) {
-          showFormError(createError?.message ?? 'Erro ao criar nota fiscal')
-          return
-        }
-        targetId = newInvoice.id
-      }
-
-      // Upload photo
-      const { url: photoUrl, error: uploadError } = await uploadProofPhoto(photoFile, targetId)
-      if (uploadError) {
-        showFormError('Erro ao fazer upload da foto')
-        return
-      }
-
-      invoiceData.proof_photo_url = photoUrl
-
-      // Update with photo URL
-      const { error: updateError } = await updateInvoice(targetId, { proof_photo_url: photoUrl })
-      if (updateError) {
-        showFormError('Erro ao atualizar foto do comprovante')
-        return
-      }
-
-      showToast(isEditing ? 'Nota fiscal atualizada!' : 'Nota fiscal cadastrada!', 'success')
-      closeModal()
-      await loadInvoices()
-      return
-    }
-
-    // Create or update without new photo
     if (isEditing) {
       const { error } = await updateInvoice(invoiceId, invoiceData)
       if (error) {
-        showFormError(error.message ?? 'Erro ao atualizar nota fiscal')
+        showFormError(getInvoiceErrorMessage(error, true))
         return
       }
-      showToast('Nota fiscal atualizada!', 'success')
     } else {
-      const { error } = await createInvoice(invoiceData)
-      if (error) {
-        // Check for duplicate fiscal key
-        if (error.message?.includes('duplicate') || error.message?.includes('unique')) {
-          showFormError('Ja existe uma nota fiscal com essa chave')
-          return
-        }
-        showFormError(error.message ?? 'Erro ao criar nota fiscal')
+      const { data: newInvoice, error } = await createInvoice(invoiceData)
+      if (error || !newInvoice) {
+        showFormError(getInvoiceErrorMessage(error, false))
         return
       }
-      showToast('Nota fiscal cadastrada!', 'success')
+      targetId = newInvoice.id
     }
+
+    // Upload proof photo after save
+    const photoFile = photoInput.files?.[0]
+    if (photoFile) {
+      const { url: photoUrl, error: uploadError } = await uploadProofPhoto(photoFile, targetId)
+      if (uploadError || !photoUrl) {
+        showFormError('A nota foi salva, mas houve erro ao enviar a foto do comprovante')
+        return
+      }
+
+      const { error: updatePhotoError } = await updateInvoice(targetId, { proof_photo_url: photoUrl })
+      if (updatePhotoError) {
+        showFormError('A nota foi salva, mas houve erro ao vincular a foto do comprovante')
+        return
+      }
+    }
+
+    showToast(isEditing ? 'Nota fiscal atualizada!' : 'Nota fiscal cadastrada!', 'success')
 
     closeModal()
     await loadInvoices()
@@ -602,6 +578,26 @@ async function handleFormSubmit(e) {
     saveBtn.removeAttribute('disabled')
     saveBtn.innerHTML = '<i class="fas fa-save mr-2"></i> Salvar'
   }
+}
+
+/**
+ * @param {Error | null} error
+ * @param {boolean} isEditing
+ */
+function getInvoiceErrorMessage(error, isEditing) {
+  if (!error) {
+    return isEditing ? 'Erro ao atualizar nota fiscal' : 'Erro ao criar nota fiscal'
+  }
+
+  if (error.message?.includes('duplicate') || error.message?.includes('unique')) {
+    return 'Ja existe uma nota fiscal com essa chave'
+  }
+
+  if (error.message?.toLowerCase().includes('row-level security')) {
+    return 'Sem permissao para salvar. Faca login novamente no painel admin'
+  }
+
+  return error.message
 }
 
 // ============================================
