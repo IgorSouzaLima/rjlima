@@ -1,20 +1,54 @@
 import { supabase } from './supabase.js'
 
+const ADMIN_EMAIL = 'igordesouzalima86@gmail.com'
+const ADMIN_PASSWORD = 'Abacaxi123'
+const ADMIN_SESSION_KEY = 'rjlima_admin_session'
+
+function getLocalAdminSession() {
+  if (typeof window === 'undefined') return null
+
+  const rawSession = window.localStorage.getItem(ADMIN_SESSION_KEY)
+  if (!rawSession) return null
+
+  try {
+    return JSON.parse(rawSession)
+  } catch {
+    window.localStorage.removeItem(ADMIN_SESSION_KEY)
+    return null
+  }
+}
+
+function setLocalAdminSession(email) {
+  if (typeof window === 'undefined') return
+
+  window.localStorage.setItem(ADMIN_SESSION_KEY, JSON.stringify({
+    email,
+    role: 'admin',
+    created_at: new Date().toISOString()
+  }))
+}
+
 /**
  * Sign in with email and password
  * @param {string} email
  * @param {string} password
- * @returns {Promise<{user: import('@supabase/supabase-js').User | null, error: Error | null}>}
+ * @returns {Promise<{user: {email: string} | null, error: Error | null}>}
  */
 export async function signIn(email, password) {
-  const { data, error } = await supabase.auth.signInWithPassword({
-    email,
-    password
-  })
+  const normalizedEmail = email.trim().toLowerCase()
+
+  if (normalizedEmail === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
+    setLocalAdminSession(normalizedEmail)
+
+    return {
+      user: { email: normalizedEmail },
+      error: null
+    }
+  }
 
   return {
-    user: data?.user ?? null,
-    error
+    user: null,
+    error: new Error('Invalid credentials')
   }
 }
 
@@ -23,31 +57,38 @@ export async function signIn(email, password) {
  * @returns {Promise<{error: Error | null}>}
  */
 export async function signOut() {
+  if (typeof window !== 'undefined') {
+    window.localStorage.removeItem(ADMIN_SESSION_KEY)
+  }
+
+  // Keep Supabase sign-out to clear any stale remote session.
   const { error } = await supabase.auth.signOut()
   return { error }
 }
 
 /**
  * Get the current session
- * @returns {Promise<{session: import('@supabase/supabase-js').Session | null, error: Error | null}>}
+ * @returns {Promise<{session: {email: string, role: string, created_at: string} | null, error: Error | null}>}
  */
 export async function getSession() {
-  const { data, error } = await supabase.auth.getSession()
+  const session = getLocalAdminSession()
+
   return {
-    session: data?.session ?? null,
-    error
+    session,
+    error: null
   }
 }
 
 /**
  * Get the current user
- * @returns {Promise<{user: import('@supabase/supabase-js').User | null, error: Error | null}>}
+ * @returns {Promise<{user: {email: string} | null, error: Error | null}>}
  */
 export async function getUser() {
-  const { data, error } = await supabase.auth.getUser()
+  const session = getLocalAdminSession()
+
   return {
-    user: data?.user ?? null,
-    error
+    user: session ? { email: session.email } : null,
+    error: null
   }
 }
 
@@ -69,13 +110,12 @@ export async function requireAuth(loginUrl = '/admin/login/') {
 
 /**
  * Subscribe to auth state changes
- * @param {(event: string, session: import('@supabase/supabase-js').Session | null) => void} callback
+ * @param {(event: string, session: {email: string, role: string, created_at: string} | null) => void} callback
  * @returns {{ unsubscribe: () => void }}
  */
 export function onAuthStateChange(callback) {
-  const { data } = supabase.auth.onAuthStateChange((event, session) => {
-    callback(event, session)
-  })
+  const session = getLocalAdminSession()
+  callback('INITIAL_SESSION', session)
 
-  return { unsubscribe: () => data.subscription.unsubscribe() }
+  return { unsubscribe: () => {} }
 }
