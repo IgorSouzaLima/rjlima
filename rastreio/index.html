@@ -26,7 +26,7 @@
                     Rastrear <span class="text-red-600">Nota Fiscal</span>
                 </h1>
                 <p class="text-gray-400 max-w-md mx-auto">
-                    Informe a chave da nota fiscal para consultar o status da sua entrega.
+                    Informe a chave ou o numero da nota fiscal para consultar o status da sua entrega.
                 </p>
             </div>
 
@@ -35,17 +35,17 @@
                 <form id="tracking-form" class="space-y-6">
                     <div class="space-y-2">
                         <label for="fiscal-key" class="text-sm font-semibold text-gray-400">
-                            Chave da Nota Fiscal (44 digitos)
+                            Chave (44 digitos) ou Numero da Nota Fiscal
                         </label>
                         <div class="relative">
                             <input
                                 type="text"
                                 id="fiscal-key"
                                 name="fiscal-key"
-                                maxlength="44"
-                                class="w-full bg-white/5 border border-white/10 rounded-xl p-4 pr-12 focus:border-red-600 outline-none transition font-mono text-lg tracking-wider"
-                                placeholder="0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000"
-                                inputmode="numeric"
+                                maxlength="60"
+                                class="w-full bg-white/5 border border-white/10 rounded-xl p-4 pr-12 focus:border-red-600 outline-none transition text-lg"
+                                placeholder="Digite a chave (44 digitos) ou o numero da nota"
+                                inputmode="text"
                             >
                             <button
                                 type="button"
@@ -58,7 +58,7 @@
                         </div>
                         <p id="key-error" class="text-red-500 text-sm hidden">
                             <i class="fas fa-exclamation-circle mr-1"></i>
-                            A chave deve conter exatamente 44 digitos numericos.
+                            Informe uma chave valida (44 digitos) ou o numero da nota fiscal.
                         </p>
                     </div>
 

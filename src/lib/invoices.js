@@ -7,16 +7,19 @@ import { supabase } from './supabase.js'
  */
 
 /**
- * Search invoice by fiscal key (public)
- * @param {string} fiscalKey
+ * Search invoice by fiscal key or invoice number (public)
+ * @param {string} query
  * @returns {Promise<{data: Invoice | null, error: Error | null}>}
  */
-export async function getInvoiceByFiscalKey(fiscalKey) {
+export async function getInvoiceByFiscalKeyOrNumber(query) {
+  const normalizedQuery = query.trim()
+
   const { data, error } = await supabase
     .from('invoices')
     .select('*')
-    .eq('fiscal_key', fiscalKey)
-    .single()
+    .or(`fiscal_key.eq.${normalizedQuery},invoice_number.eq.${normalizedQuery}`)
+    .limit(1)
+    .maybeSingle()
 
   return { data, error }
 }

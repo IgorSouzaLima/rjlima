@@ -1,7 +1,7 @@
 import '../style.css'
 import { createHeader, createFooter, showToast, showLoading } from '../shared/components.js'
 import { isValidFiscalKey, formatFiscalKey, formatDate, getStatusColor, getStatusIcon } from '../shared/utils.js'
-import { getInvoiceByFiscalKey } from '../lib/invoices.js'
+import { getInvoiceByFiscalKeyOrNumber } from '../lib/invoices.js'
 
 // Initialize page
 document.addEventListener('DOMContentLoaded', () => {
@@ -19,14 +19,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize form
   initializeForm()
 
-  // Check for fiscal key in URL params
+  // Check for query in URL params
   const urlParams = new URLSearchParams(window.location.search)
-  const fiscalKey = urlParams.get('chave')
-  if (fiscalKey) {
+  const query = urlParams.get('q') || urlParams.get('chave')
+  if (query) {
     const input = /** @type {HTMLInputElement} */ (document.getElementById('fiscal-key'))
     if (input) {
-      input.value = fiscalKey
-      performSearch(fiscalKey)
+      input.value = query
+      performSearch(query)
     }
   }
 })
@@ -39,10 +39,9 @@ function initializeForm() {
 
   if (!form || !input || !pasteBtn || !errorEl) return
 
-  // Input validation on change
+  // Input cleanup on change
   input.addEventListener('input', () => {
-    // Remove non-numeric characters
-    input.value = input.value.replace(/\D/g, '')
+    input.value = input.value.trimStart()
     errorEl.classList.add('hidden')
   })
 
@@ -50,8 +49,7 @@ function initializeForm() {
   pasteBtn.addEventListener('click', async () => {
     try {
       const text = await navigator.clipboard.readText()
-      const cleanText = text.replace(/\D/g, '')
-      input.value = cleanText.slice(0, 44)
+      input.value = text.trim()
       input.dispatchEvent(new Event('input'))
       input.focus()
     } catch {
@@ -63,22 +61,35 @@ function initializeForm() {
   form.addEventListener('submit', async (e) => {
     e.preventDefault()
 
-    const fiscalKey = input.value.trim()
+    const query = input.value.trim()
 
-    if (!isValidFiscalKey(fiscalKey)) {
+    if (!isValidTrackingQuery(query)) {
       errorEl.classList.remove('hidden')
       input.focus()
       return
     }
 
-    await performSearch(fiscalKey)
+    await performSearch(query)
   })
 }
 
 /**
- * @param {string} fiscalKey
+ * @param {string} query
  */
-async function performSearch(fiscalKey) {
+function isValidTrackingQuery(query) {
+  if (!query) return false
+
+  if (/^\d+$/.test(query)) {
+    return query.length === 44 || query.length <= 20
+  }
+
+  return query.length >= 3
+}
+
+/**
+ * @param {string} query
+ */
+async function performSearch(query) {
   const resultContainer = document.getElementById('result-container')
   const submitBtn = document.getElementById('submit-btn')
 
@@ -91,7 +102,7 @@ async function performSearch(fiscalKey) {
   showLoading(true)
 
   try {
-    const { data, error } = await getInvoiceByFiscalKey(fiscalKey)
+    const { data, error } = await getInvoiceByFiscalKeyOrNumber(query)
 
     showLoading(false)
 
@@ -105,7 +116,7 @@ async function performSearch(fiscalKey) {
     resultContainer.classList.remove('hidden')
 
     // Update URL without reload
-    const newUrl = `${window.location.pathname}?chave=${fiscalKey}`
+    const newUrl = `${window.location.pathname}?q=${encodeURIComponent(query)}`
     window.history.pushState({}, '', newUrl)
 
   } catch {
@@ -125,7 +136,7 @@ function renderNotFound() {
       </div>
       <h2 class="text-2xl font-bold mb-2">Nota Nao Encontrada</h2>
       <p class="text-gray-400 mb-6">
-        Nao encontramos nenhuma nota fiscal com essa chave. Verifique se a chave foi digitada corretamente.
+        Nao encontramos nenhuma nota fiscal com os dados informados. Verifique a chave ou numero da nota e tente novamente.
       </p>
       <button
         onclick="document.getElementById('fiscal-key').focus()"
@@ -179,15 +190,17 @@ function renderResult(invoice) {
             <i class="fas fa-truck ${invoice.status === 'Aguardando coleta' ? 'text-gray-500' : 'text-blue-400'}"></i>
           </div>
           <div>
-            <p class="font-semibold ${invoice.status === 'Aguardando coleta' ? 'text-gray-500' : ''}">Em Transito</p>
-            <p class="text-gray-500 text-sm">${invoice.status === 'Aguardando coleta' ? 'Aguardando...' : 'Carga em deslocamento'}</p>
+            <p class="font-semibold ${invoice.status === 'Aguardando coleta' ? 'text-gray-500' : ''}">Em Transporte</p>
+            <p class="text-gray-500 text-sm">
+              ${invoice.status === 'Aguardando coleta' ? 'Aguardando coleta' : 'Mercadoria em rota de entrega'}
+            </p>
           </div>
         </div>
 
-        <!-- Delivery -->
+        <!-- Delivered -->
         <div class="flex items-start gap-4">
           <div class="w-10 h-10 rounded-full ${isDelivered ? 'bg-green-500/20' : 'bg-gray-500/20'} flex items-center justify-center flex-shrink-0 mt-1">
-            <i class="fas fa-circle-check ${isDelivered ? 'text-green-400' : 'text-gray-500'}"></i>
+            <i class="fas fa-check ${isDelivered ? 'text-green-400' : 'text-gray-500'}"></i>
           </div>
           <div>
             <p class="font-semibold ${isDelivered ? '' : 'text-gray-500'}">Entregue</p>
