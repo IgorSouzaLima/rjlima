@@ -6,27 +6,60 @@ import { showToast } from './shared/components.js'
 function toggleMenu() {
   const nav = document.getElementById('mobile-nav')
   const icon = document.getElementById('menu-icon')
+  const button = document.querySelector('button[aria-label="Menu"]')
+  if (!nav || !icon) return
   nav.classList.toggle('active')
+  if (button) {
+    button.setAttribute('aria-expanded', String(nav.classList.contains('active')))
+  }
   icon.classList.toggle('fa-bars')
   icon.classList.toggle('fa-times')
+}
+
+function closeMenu() {
+  const nav = document.getElementById('mobile-nav')
+  const icon = document.getElementById('menu-icon')
+  const button = document.querySelector('button[aria-label="Menu"]')
+  if (!nav || !icon || !nav.classList.contains('active')) return
+  nav.classList.remove('active')
+  if (button) {
+    button.setAttribute('aria-expanded', 'false')
+  }
+  icon.classList.add('fa-bars')
+  icon.classList.remove('fa-times')
 }
 
 // Handle Form submission via EmailJS
 async function handleFormSubmit(e) {
   e.preventDefault()
 
+  const honeypot = e.target.querySelector('input[name="empresa_site"]')
+  if (honeypot?.value) return
+
   const nome = document.getElementById('nome').value
   const tel = document.getElementById('telefone').value
+  const perfil = document.getElementById('perfil')?.value || 'Nao informado'
+  const segmento = document.getElementById('segmento')?.value || 'Nao informado'
   const origem = document.getElementById('origem').value
   const destino = document.getElementById('destino').value
   const desc = document.getElementById('descricao').value
+  const detailedDescription = [
+    `Perfil da demanda: ${perfil}`,
+    `Carga ou segmento: ${segmento}`,
+    `Origem: ${origem}`,
+    `Destino: ${destino}`,
+    '',
+    desc
+  ].join('\n')
 
   const templateParams = {
     nome,
     telefone: tel,
+    perfil,
+    segmento,
     origem,
     destino,
-    descricao: desc
+    descricao: detailedDescription
   }
 
   const submitBtn = e.target.querySelector('button[type="submit"]')
@@ -54,22 +87,6 @@ async function handleFormSubmit(e) {
   }
 }
 
-// Header scroll effect
-function handleScroll() {
-  const header = document.querySelector('header')
-  if (window.scrollY > 50) {
-    header.classList.add('bg-black/95')
-    header.classList.add('py-2')
-    header.classList.remove('glass')
-    header.classList.remove('py-4')
-  } else {
-    header.classList.remove('bg-black/95')
-    header.classList.remove('py-2')
-    header.classList.add('glass')
-    header.classList.add('py-4')
-  }
-}
-
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   // Expose toggleMenu globally for onclick handlers
@@ -81,6 +98,23 @@ document.addEventListener('DOMContentLoaded', () => {
     quoteForm.addEventListener('submit', handleFormSubmit)
   }
 
-  // Add scroll listener
-  window.addEventListener('scroll', handleScroll)
+  const currentYear = document.getElementById('currentYear')
+  if (currentYear) {
+    currentYear.textContent = new Date().getFullYear()
+  }
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeMenu()
+    }
+  })
+
+  document.addEventListener('click', (event) => {
+    const nav = document.getElementById('mobile-nav')
+    const button = document.querySelector('button[aria-label="Menu"]')
+    if (!nav || !button || !nav.classList.contains('active')) return
+    if (!nav.contains(event.target) && !button.contains(event.target)) {
+      closeMenu()
+    }
+  })
 })
