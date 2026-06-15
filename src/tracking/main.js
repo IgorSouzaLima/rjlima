@@ -121,7 +121,7 @@ function renderNotFound() {
   return `
     <div class="glass p-8 rounded-3xl text-center">
       <div class="w-20 h-20 bg-red-600/10 rounded-full flex items-center justify-center mx-auto mb-6">
-        <i class="fas fa-file-circle-xmark text-4xl text-red-500"></i>
+        <i class="fas fa-circle-xmark text-4xl text-red-500"></i>
       </div>
       <h2 class="text-2xl font-bold mb-2">Nota Nao Encontrada</h2>
       <p class="text-gray-400 mb-6">

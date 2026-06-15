@@ -38,16 +38,28 @@ async function handleFormSubmit(e) {
 
   const nome = document.getElementById('nome').value
   const tel = document.getElementById('telefone').value
+  const perfil = document.getElementById('perfil')?.value || 'Nao informado'
+  const segmento = document.getElementById('segmento')?.value || 'Nao informado'
   const origem = document.getElementById('origem').value
   const destino = document.getElementById('destino').value
   const desc = document.getElementById('descricao').value
+  const detailedDescription = [
+    `Perfil da demanda: ${perfil}`,
+    `Carga ou segmento: ${segmento}`,
+    `Origem: ${origem}`,
+    `Destino: ${destino}`,
+    '',
+    desc
+  ].join('\n')
 
   const templateParams = {
     nome,
     telefone: tel,
+    perfil,
+    segmento,
     origem,
     destino,
-    descricao: desc
+    descricao: detailedDescription
   }
 
   const submitBtn = e.target.querySelector('button[type="submit"]')
@@ -75,22 +87,6 @@ async function handleFormSubmit(e) {
   }
 }
 
-// Header scroll effect
-function handleScroll() {
-  const header = document.querySelector('header')
-  if (window.scrollY > 50) {
-    header.classList.add('bg-black/95')
-    header.classList.add('py-2')
-    header.classList.remove('glass')
-    header.classList.remove('py-4')
-  } else {
-    header.classList.remove('bg-black/95')
-    header.classList.remove('py-2')
-    header.classList.add('glass')
-    header.classList.add('py-4')
-  }
-}
-
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   // Expose toggleMenu globally for onclick handlers
@@ -101,9 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (quoteForm) {
     quoteForm.addEventListener('submit', handleFormSubmit)
   }
-
-  // Add scroll listener
-  window.addEventListener('scroll', handleScroll)
 
   const currentYear = document.getElementById('currentYear')
   if (currentYear) {
