@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cidades atendidas | RJ Lima Transportes</title>
+  <meta name="description" content="Consulte cidades e rotas atendidas pela RJ Lima Transportes com busca por cidade, UF e mapa de abrangência operacional.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://rjlimatransportes.com.br/cidades-atendidas/">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIINfQKpJdBb6tP5xnN7QfNfD9N3+Ah86gE=" crossorigin="">
+</head>
+<body class="bg-black text-white min-h-screen flex flex-col selection:bg-red-500/30">
+  <div id="header-container"></div>
+
+  <main class="flex-1 pt-32 pb-16 px-6">
+    <section class="container mx-auto max-w-6xl">
+      <div class="grid lg:grid-cols-[0.85fr_1.15fr] gap-10 items-start mb-10">
+        <div>
+          <span class="text-red-500 font-bold tracking-[0.2em] uppercase text-sm">Abrangência</span>
+          <h1 class="text-4xl md:text-5xl font-extrabold mt-4 mb-5">
+            Cidades <span class="text-red-600">atendidas</span>
+          </h1>
+          <p class="text-gray-400 text-lg leading-relaxed mb-6">
+            A RJ Lima e referencia em transporte fracionado no Sul de Minas Gerais. Atendemos toda a regiao no fracionado e mantemos o PDF de abrangencia como documento oficial de cidades, prazos e condicoes operacionais.
+          </p>
+          <div id="coverage-highlights" class="coverage-highlights"></div>
+          <p class="coverage-note">
+            O mapa exibe pontos de referencia por cidade. Se uma cidade do Sul de Minas nao aparecer na busca, consulte o PDF oficial ou solicite a cotacao da rota.
+          </p>
+        </div>
+
+        <div class="coverage-summary glass rounded-3xl p-6">
+          <div>
+            <strong id="total-cities">0</strong>
+            <span>destinos na lista</span>
+          </div>
+          <div>
+            <strong id="total-states">0</strong>
+            <span>UFs na busca</span>
+          </div>
+          <div>
+            <strong>Mapa real</strong>
+            <span>pontos por coordenada</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="coverage-tools glass rounded-3xl p-5 mb-6">
+        <div class="relative">
+          <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500">
+            <i class="fas fa-search"></i>
+          </span>
+          <input
+            id="city-search"
+            type="search"
+            class="w-full bg-white/5 border border-white/10 rounded-xl p-4 pl-12 focus:border-red-600 outline-none transition"
+            placeholder="Buscar por cidade, UF ou região"
+            autocomplete="off"
+          >
+        </div>
+        <div id="state-filters" class="coverage-state-filters" aria-label="Filtrar por estado"></div>
+      </div>
+
+      <div class="grid lg:grid-cols-[0.92fr_1.08fr] gap-6 items-start">
+        <section class="coverage-list-panel glass rounded-3xl overflow-hidden">
+          <div class="coverage-list-head">
+            <h2>Cidades encontradas</h2>
+            <span id="city-count">0 resultados</span>
+          </div>
+          <div id="cities-list" class="coverage-list"></div>
+        </section>
+
+        <section class="coverage-map-panel glass rounded-3xl overflow-hidden">
+          <div id="coverage-map" class="coverage-map" aria-label="Mapa das cidades atendidas"></div>
+          <div class="coverage-map-legend" aria-label="Legenda do mapa">
+            <span><i class="coverage-dot coverage-dot-central"></i>Central Três Corações</span>
+            <span><i class="coverage-dot coverage-dot-service"></i>Cidades atendidas</span>
+            <span><i class="coverage-dot coverage-dot-capital"></i>Capitais</span>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-container"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script type="module" src="/src/cities/main.js"></script>
+</body>
+</html>

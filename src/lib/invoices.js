@@ -1,4 +1,5 @@
 import { supabase } from './supabase.js'
+import { normalizeTrackingRecord, trackingRecordFromInvoice } from '../tracking/normalize.js'
 
 /**
  * @typedef {import('../types/supabase.js').Invoice} Invoice
@@ -12,6 +13,10 @@ import { supabase } from './supabase.js'
  * @returns {Promise<{data: Invoice | null, error: Error | null}>}
  */
 export async function getInvoiceByFiscalKey(fiscalKey) {
+  if (!supabase) {
+    return { data: null, error: new Error('Supabase nao configurado') }
+  }
+
   const { data, error } = await supabase
     .from('invoices')
     .select('*')
@@ -19,6 +24,44 @@ export async function getInvoiceByFiscalKey(fiscalKey) {
     .single()
 
   return { data, error }
+}
+
+/**
+ * Search invoice/tracking data using an external API when configured.
+ * Falls back to Supabase so the current admin workflow keeps working.
+ * @param {string} fiscalKey
+ * @returns {Promise<{data: import('../tracking/normalize.js').TrackingRecord | null, error: Error | null, source: 'api' | 'supabase' | 'none'}>}
+ */
+export async function getTrackingByFiscalKey(fiscalKey) {
+  const trackingApiUrl = import.meta.env.VITE_TRACKING_API_URL
+
+  if (trackingApiUrl) {
+    try {
+      const url = new URL(trackingApiUrl)
+      url.searchParams.set('fiscalKey', fiscalKey)
+
+      const response = await fetch(url.toString(), {
+        headers: { Accept: 'application/json' }
+      })
+
+      if (response.ok) {
+        const payload = await response.json()
+        const data = normalizeTrackingRecord(payload)
+        if (data.fiscalKey || data.invoiceNumber) {
+          return { data, error: null, source: 'api' }
+        }
+      }
+    } catch (error) {
+      console.warn('Falha ao consultar API de rastreio, usando fallback Supabase.', error)
+    }
+  }
+
+  const { data, error } = await getInvoiceByFiscalKey(fiscalKey)
+  if (data) {
+    return { data: trackingRecordFromInvoice(data), error: null, source: 'supabase' }
+  }
+
+  return { data: null, error, source: 'none' }
 }
 
 /**
@@ -31,6 +74,10 @@ export async function getInvoiceByFiscalKey(fiscalKey) {
  * @returns {Promise<{data: Invoice[], count: number, error: Error | null}>}
  */
 export async function getInvoices({ page = 1, pageSize = 10, status, search } = {}) {
+  if (!supabase) {
+    return { data: [], count: 0, error: new Error('Supabase nao configurado') }
+  }
+
   const from = (page - 1) * pageSize
   const to = from + pageSize - 1
 
@@ -63,6 +110,10 @@ export async function getInvoices({ page = 1, pageSize = 10, status, search } = 
  * @returns {Promise<{data: Invoice | null, error: Error | null}>}
  */
 export async function getInvoiceById(id) {
+  if (!supabase) {
+    return { data: null, error: new Error('Supabase nao configurado') }
+  }
+
   const { data, error } = await supabase
     .from('invoices')
     .select('*')
@@ -78,6 +129,10 @@ export async function getInvoiceById(id) {
  * @returns {Promise<{data: Invoice | null, error: Error | null}>}
  */
 export async function createInvoice(invoice) {
+  if (!supabase) {
+    return { data: null, error: new Error('Supabase nao configurado') }
+  }
+
   const { data, error } = await supabase
     .from('invoices')
     .insert(invoice)
@@ -94,6 +149,10 @@ export async function createInvoice(invoice) {
  * @returns {Promise<{data: Invoice | null, error: Error | null}>}
  */
 export async function updateInvoice(id, updates) {
+  if (!supabase) {
+    return { data: null, error: new Error('Supabase nao configurado') }
+  }
+
   const { data, error } = await supabase
     .from('invoices')
     .update({ ...updates, updated_at: new Date().toISOString() })
@@ -110,6 +169,10 @@ export async function updateInvoice(id, updates) {
  * @returns {Promise<{error: Error | null}>}
  */
 export async function deleteInvoice(id) {
+  if (!supabase) {
+    return { error: new Error('Supabase nao configurado') }
+  }
+
   const { error } = await supabase
     .from('invoices')
     .delete()
@@ -125,6 +188,10 @@ export async function deleteInvoice(id) {
  * @returns {Promise<{url: string | null, error: Error | null}>}
  */
 export async function uploadProofPhoto(file, invoiceId) {
+  if (!supabase) {
+    return { url: null, error: new Error('Supabase nao configurado') }
+  }
+
   const fileExt = file.name.split('.').pop()
   const fileName = `${invoiceId}-${Date.now()}.${fileExt}`
   const filePath = `proofs/${fileName}`
@@ -150,6 +217,10 @@ export async function uploadProofPhoto(file, invoiceId) {
  * @returns {Promise<{error: Error | null}>}
  */
 export async function deleteProofPhoto(url) {
+  if (!supabase) {
+    return { error: new Error('Supabase nao configurado') }
+  }
+
   // Extract path from URL
   const urlParts = url.split('/proof-photos/')
   if (urlParts.length < 2) {

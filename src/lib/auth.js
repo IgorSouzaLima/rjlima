@@ -1,5 +1,12 @@
 import { supabase } from './supabase.js'
 
+function getSupabaseClientOrError() {
+  if (!supabase) {
+    return { client: null, error: new Error('Supabase nao configurado') }
+  }
+  return { client: supabase, error: null }
+}
+
 /**
  * Sign in with email and password
  * @param {string} email
@@ -7,7 +14,10 @@ import { supabase } from './supabase.js'
  * @returns {Promise<{user: import('@supabase/supabase-js').User | null, error: Error | null}>}
  */
 export async function signIn(email, password) {
-  const { data, error } = await supabase.auth.signInWithPassword({
+  const { client, error: configError } = getSupabaseClientOrError()
+  if (!client) return { user: null, error: configError }
+
+  const { data, error } = await client.auth.signInWithPassword({
     email,
     password
   })
@@ -23,7 +33,10 @@ export async function signIn(email, password) {
  * @returns {Promise<{error: Error | null}>}
  */
 export async function signOut() {
-  const { error } = await supabase.auth.signOut()
+  const { client, error: configError } = getSupabaseClientOrError()
+  if (!client) return { error: configError }
+
+  const { error } = await client.auth.signOut()
   return { error }
 }
 
@@ -32,7 +45,10 @@ export async function signOut() {
  * @returns {Promise<{session: import('@supabase/supabase-js').Session | null, error: Error | null}>}
  */
 export async function getSession() {
-  const { data, error } = await supabase.auth.getSession()
+  const { client, error: configError } = getSupabaseClientOrError()
+  if (!client) return { session: null, error: configError }
+
+  const { data, error } = await client.auth.getSession()
   return {
     session: data?.session ?? null,
     error
@@ -44,7 +60,10 @@ export async function getSession() {
  * @returns {Promise<{user: import('@supabase/supabase-js').User | null, error: Error | null}>}
  */
 export async function getUser() {
-  const { data, error } = await supabase.auth.getUser()
+  const { client, error: configError } = getSupabaseClientOrError()
+  if (!client) return { user: null, error: configError }
+
+  const { data, error } = await client.auth.getUser()
   return {
     user: data?.user ?? null,
     error
@@ -73,7 +92,10 @@ export async function requireAuth(loginUrl = '/admin/login/') {
  * @returns {{ unsubscribe: () => void }}
  */
 export function onAuthStateChange(callback) {
-  const { data } = supabase.auth.onAuthStateChange((event, session) => {
+  const { client } = getSupabaseClientOrError()
+  if (!client) return { unsubscribe: () => {} }
+
+  const { data } = client.auth.onAuthStateChange((event, session) => {
     callback(event, session)
   })
 

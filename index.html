@@ -104,7 +104,7 @@
                 <a href="#inicio" class="hover:text-red-500 transition">Início</a>
                 <a href="#segmentos" class="hover:text-red-500 transition">Segmentos</a>
                 <a href="#servicos" class="hover:text-red-500 transition">Serviços</a>
-                <a href="#regioes" class="hover:text-red-500 transition">Regiões</a>
+                <a href="/cidades-atendidas/" class="hover:text-red-500 transition">Cidades</a>
                 <a href="#parceiras" class="hover:text-red-500 transition">Parceiras</a>
                 <a href="/rastreio/" class="hover:text-red-500 transition">Rastrear</a>
                 <a href="#orcamento" class="bg-red-600 px-6 py-2 rounded-full hover:bg-red-700 transition shadow-lg shadow-red-600/20">Cotação</a>
@@ -119,7 +119,7 @@
             <a href="#inicio" onclick="toggleMenu()" class="text-lg py-2 border-b border-white/5">Início</a>
             <a href="#segmentos" onclick="toggleMenu()" class="text-lg py-2 border-b border-white/5">Segmentos</a>
             <a href="#servicos" onclick="toggleMenu()" class="text-lg py-2 border-b border-white/5">Serviços</a>
-            <a href="#regioes" onclick="toggleMenu()" class="text-lg py-2 border-b border-white/5">Regiões</a>
+            <a href="/cidades-atendidas/" onclick="toggleMenu()" class="text-lg py-2 border-b border-white/5">Cidades atendidas</a>
             <a href="#parceiras" onclick="toggleMenu()" class="text-lg py-2 border-b border-white/5">Parceiras</a>
             <a href="/rastreio/" onclick="toggleMenu()" class="text-lg py-2 border-b border-white/5">Rastrear</a>
             <a href="#orcamento" onclick="toggleMenu()" class="text-lg py-2 text-red-500 font-bold">Solicitar Orçamento</a>
@@ -127,12 +127,12 @@
     </header>
 
     <main id="conteudo">
-        <section id="inicio" class="hero-gradient px-6 pt-24 pb-10 md:pb-14 min-h-[620px] md:min-h-[720px] lg:min-h-[820px] flex items-center">
-            <div class="container mx-auto grid md:grid-cols-[0.95fr_1.05fr] gap-10 items-center">
+        <section id="inicio" class="hero-gradient px-6 pt-24 pb-10 md:pb-14 min-h-[620px] md:min-h-[700px] lg:min-h-[760px] flex items-center">
+            <div class="container mx-auto grid md:grid-cols-[1.06fr_0.94fr] gap-10 lg:gap-14 items-center">
                 <div class="space-y-5">
                     <span class="text-gold font-bold text-sm">RJ Lima Transportes e Logística</span>
-                    <h1 class="text-[2.65rem] md:text-5xl lg:text-6xl font-extrabold leading-[1.02] max-w-3xl">
-                        <span class="hidden md:inline">Transporte B2B para empresas que precisam de previsibilidade</span>
+                    <h1 class="text-[2.65rem] md:text-5xl lg:text-[4.75rem] font-extrabold leading-[1.02] max-w-3xl">
+                        <span class="hidden md:inline">Transporte B2B para<br>empresas que<br>precisam de<br>previsibilidade</span>
                         <span class="md:hidden">Transporte B2B com previsibilidade</span>
                     </h1>
                     <p class="hidden md:block text-gray-300 text-lg max-w-xl leading-relaxed">
@@ -145,28 +145,14 @@
                         <a href="#orcamento" class="red-gradient px-8 py-4 rounded-xl font-bold flex items-center shadow-lg shadow-red-900/20 hover:scale-105 transition">
                             <i class="fas fa-file-invoice-dollar mr-2"></i> Solicitar cotação
                         </a>
-                        <a href="#regioes" class="border border-white/15 px-8 py-4 rounded-xl font-bold flex items-center hover:border-gold hover:text-gold transition">
+                        <a href="/cidades-atendidas/" class="border border-white/15 px-8 py-4 rounded-xl font-bold flex items-center hover:border-gold hover:text-gold transition">
                             <i class="fas fa-map-location-dot mr-2"></i> Conhecer regiões atendidas
                         </a>
-                    </div>
-                    <div class="proof-strip pt-3">
-                        <div class="metric-card">
-                            <p class="text-2xl font-extrabold text-white">B2B</p>
-                            <p class="text-xs text-gray-400">empresas e rotas</p>
-                        </div>
-                        <div class="metric-card">
-                            <p class="text-2xl font-extrabold text-white">5 nichos</p>
-                            <p class="text-xs text-gray-400">incluindo agro e pet</p>
-                        </div>
-                        <div class="metric-card">
-                            <p class="text-2xl font-extrabold text-white">Rotas</p>
-                            <p class="text-xs text-gray-400">MG, SP, PR e ES</p>
-                        </div>
                     </div>
                 </div>
                 <div class="hidden md:block relative">
                     <div class="absolute -inset-8 bg-red-600/10 blur-[90px] rounded-full"></div>
-                    <img src="/hero-logistics-b2b.png" alt="Caminhão em operação de transporte rodoviário B2B ao amanhecer" class="hero-image relative z-10" fetchpriority="high" decoding="async" width="1586" height="992">
+                    <img src="/hero-logistics-b2b.png" alt="Caminhão RJ Lima em operação de transporte rodoviário ao amanhecer" class="hero-image relative z-10" fetchpriority="high" decoding="async" width="1092" height="1440">
                     <div class="operation-note glass rounded-2xl p-5">
                         <p class="text-sm text-gray-300">Operação com acompanhamento de carga, comunicação direta e comprovantes organizados.</p>
                     </div>
@@ -308,6 +294,10 @@
                                 <strong>Consultar abrangência RJ Lima</strong>
                                 <span>Baixe o PDF com cidades atendidas e prazos.</span>
                             </div>
+                        </a>
+                        <a href="/cidades-atendidas/" class="mt-4 inline-flex items-center gap-2 text-red-500 hover:text-red-400 font-semibold transition">
+                            <i class="fas fa-magnifying-glass-location"></i>
+                            Buscar cidade no mapa
                         </a>
                     </div>
                     <div class="region-grid">

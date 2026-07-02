@@ -11,6 +11,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         rastreio: resolve(__dirname, 'rastreio/index.html'),
+        cidadesAtendidas: resolve(__dirname, 'cidades-atendidas/index.html'),
         admin: resolve(__dirname, 'admin/index.html'),
         adminLogin: resolve(__dirname, 'admin/login/index.html')
       }

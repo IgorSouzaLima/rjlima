@@ -1,7 +1,8 @@
 import '../style.css'
 import { createHeader, createFooter, showToast, showLoading } from '../shared/components.js'
 import { isValidFiscalKey, formatFiscalKey, formatDate, getStatusColor, getStatusIcon } from '../shared/utils.js'
-import { getInvoiceByFiscalKey } from '../lib/invoices.js'
+import { getTrackingByFiscalKey } from '../lib/invoices.js'
+import { TRACKING_STEPS, getTrackingStepState } from './normalize.js'
 
 // Initialize page
 document.addEventListener('DOMContentLoaded', () => {
@@ -91,7 +92,7 @@ async function performSearch(fiscalKey) {
   showLoading(true)
 
   try {
-    const { data, error } = await getInvoiceByFiscalKey(fiscalKey)
+    const { data, error } = await getTrackingByFiscalKey(fiscalKey)
 
     showLoading(false)
 
@@ -139,12 +140,13 @@ function renderNotFound() {
 }
 
 /**
- * @param {import('../types/supabase.js').Invoice} invoice
+ * @param {import('./normalize.js').TrackingRecord} tracking
  */
-function renderResult(invoice) {
-  const statusColor = getStatusColor(invoice.status)
-  const statusIcon = getStatusIcon(invoice.status)
-  const isDelivered = invoice.status === 'Entregue'
+function renderResult(tracking) {
+  const statusColor = getStatusColor(tracking.status)
+  const statusIcon = getStatusIcon(tracking.status)
+  const isDelivered = tracking.status === 'Entregue'
+  const eventsByStatus = new Map(tracking.events.map((event) => [event.status, event]))
 
   return `
     <div class="glass p-8 rounded-3xl">
@@ -152,48 +154,21 @@ function renderResult(invoice) {
       <div class="flex items-center justify-between mb-8 flex-wrap gap-4">
         <div>
           <p class="text-sm text-gray-500 mb-1">Nota Fiscal</p>
-          <h2 class="text-2xl font-bold">${invoice.invoice_number}</h2>
+          <h2 class="text-2xl font-bold">${tracking.invoiceNumber || 'Nota consultada'}</h2>
         </div>
         <div class="px-4 py-2 rounded-full border ${statusColor} flex items-center gap-2">
           <i class="fas ${statusIcon}"></i>
-          <span class="font-semibold">${invoice.status}</span>
+          <span class="font-semibold">${tracking.status}</span>
         </div>
       </div>
 
       <!-- Timeline -->
-      <div class="space-y-6 mb-8">
-        <!-- Collection -->
-        <div class="flex items-start gap-4">
-          <div class="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-1">
-            <i class="fas fa-box-open text-green-400"></i>
-          </div>
-          <div>
-            <p class="font-semibold">Coleta Realizada</p>
-            <p class="text-gray-400 text-sm">${formatDate(invoice.collection_date)}</p>
-          </div>
-        </div>
-
-        <!-- In Transit -->
-        <div class="flex items-start gap-4">
-          <div class="w-10 h-10 rounded-full ${invoice.status === 'Aguardando coleta' ? 'bg-gray-500/20' : 'bg-blue-500/20'} flex items-center justify-center flex-shrink-0 mt-1">
-            <i class="fas fa-truck ${invoice.status === 'Aguardando coleta' ? 'text-gray-500' : 'text-blue-400'}"></i>
-          </div>
-          <div>
-            <p class="font-semibold ${invoice.status === 'Aguardando coleta' ? 'text-gray-500' : ''}">Em Transito</p>
-            <p class="text-gray-500 text-sm">${invoice.status === 'Aguardando coleta' ? 'Aguardando...' : 'Carga em deslocamento'}</p>
-          </div>
-        </div>
-
-        <!-- Delivery -->
-        <div class="flex items-start gap-4">
-          <div class="w-10 h-10 rounded-full ${isDelivered ? 'bg-green-500/20' : 'bg-gray-500/20'} flex items-center justify-center flex-shrink-0 mt-1">
-            <i class="fas fa-circle-check ${isDelivered ? 'text-green-400' : 'text-gray-500'}"></i>
-          </div>
-          <div>
-            <p class="font-semibold ${isDelivered ? '' : 'text-gray-500'}">Entregue</p>
-            <p class="text-gray-500 text-sm">${isDelivered ? formatDate(invoice.delivery_date) : 'Aguardando entrega'}</p>
-          </div>
-        </div>
+      <div class="tracking-timeline mb-8">
+        ${TRACKING_STEPS.map((step) => renderTimelineStep({
+          event: eventsByStatus.get(step),
+          state: getTrackingStepState(step, tracking.status),
+          status: step
+        })).join('')}
       </div>
 
       <!-- Details -->
@@ -202,29 +177,29 @@ function renderResult(invoice) {
         <div class="grid md:grid-cols-2 gap-4">
           <div class="bg-white/5 p-4 rounded-xl">
             <p class="text-sm text-gray-500 mb-1">Destinatario</p>
-            <p class="font-medium">${invoice.recipient}</p>
+            <p class="font-medium">${tracking.recipient || '-'}</p>
           </div>
           <div class="bg-white/5 p-4 rounded-xl">
             <p class="text-sm text-gray-500 mb-1">Destino</p>
-            <p class="font-medium">${invoice.city} - ${invoice.state}</p>
+            <p class="font-medium">${tracking.destination.city || '-'} - ${tracking.destination.state || '-'}</p>
           </div>
           <div class="md:col-span-2 bg-white/5 p-4 rounded-xl">
             <p class="text-sm text-gray-500 mb-1">Chave da Nota Fiscal</p>
-            <p class="font-mono text-sm break-all">${formatFiscalKey(invoice.fiscal_key)}</p>
+            <p class="font-mono text-sm break-all">${formatFiscalKey(tracking.fiscalKey)}</p>
           </div>
         </div>
       </div>
 
-      ${isDelivered && invoice.proof_photo_url ? `
+      ${isDelivered && tracking.proof?.url ? `
         <!-- Proof Photo -->
         <div class="border-t border-white/10 pt-6 mt-6">
-          <h3 class="text-lg font-bold mb-4">Comprovante de Entrega</h3>
+          <h3 class="text-lg font-bold mb-4">${tracking.proof.label}</h3>
           <div class="relative group">
             <img
-              src="${invoice.proof_photo_url}"
+              src="${tracking.proof.url}"
               alt="Comprovante de entrega"
               class="rounded-xl max-h-96 w-full object-cover cursor-pointer"
-              onclick="window.open('${invoice.proof_photo_url}', '_blank')"
+              onclick="window.open('${tracking.proof.url}', '_blank')"
             >
             <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center rounded-xl">
               <span class="text-white flex items-center gap-2">
@@ -237,4 +212,50 @@ function renderResult(invoice) {
       ` : ''}
     </div>
   `
+}
+
+/**
+ * @param {{event: import('./normalize.js').TrackingEvent | undefined, state: 'completed' | 'current' | 'pending', status: string}} options
+ * @returns {string}
+ */
+function renderTimelineStep({ event, state, status }) {
+  const icon = getTimelineIcon(status)
+  const stateClass = {
+    completed: 'is-completed',
+    current: 'is-current',
+    pending: 'is-pending'
+  }[state]
+  const place = event?.city && event?.state ? `${event.city} - ${event.state}` : 'Local em atualizacao'
+  const date = event?.date ? formatDate(event.date) : 'Aguardando atualizacao'
+  const description = event?.description ?? 'Aguardando atualizacao da operacao'
+
+  return `
+    <article class="tracking-step ${stateClass}">
+      <div class="tracking-step-marker">
+        <i class="fas ${icon}"></i>
+      </div>
+      <div class="tracking-step-content">
+        <div class="flex items-center justify-between gap-4 flex-wrap">
+          <h3>${status}</h3>
+          <span>${date}</span>
+        </div>
+        <p>${description}</p>
+        <small><i class="fas fa-location-dot"></i> ${place}</small>
+      </div>
+    </article>
+  `
+}
+
+/**
+ * @param {string} status
+ * @returns {string}
+ */
+function getTimelineIcon(status) {
+  const icons = {
+    'Coleta': 'fa-box-open',
+    'Em rota': 'fa-truck-fast',
+    'Saiu para entrega': 'fa-route',
+    'Entregue': 'fa-circle-check'
+  }
+  return icons[status] ?? 'fa-circle'
 }

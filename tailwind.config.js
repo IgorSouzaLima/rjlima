@@ -3,6 +3,7 @@ export default {
   content: [
     "./index.html",
     "./rastreio/**/*.html",
+    "./cidades-atendidas/**/*.html",
     "./admin/**/*.html",
     "./src/**/*.{js,ts,jsx,tsx}"
   ],

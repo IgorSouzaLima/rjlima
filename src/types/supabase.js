@@ -48,4 +48,24 @@ export const INVOICE_STATUSES = /** @type {const} */ ([
   'Entregue'
 ])
 
+/**
+ * @typedef {Object} TrackingEvent
+ * @property {string} status
+ * @property {string | null} date
+ * @property {string | null} city
+ * @property {string | null} state
+ * @property {string} description
+ */
+
+/**
+ * @typedef {Object} TrackingRecord
+ * @property {string} invoiceNumber
+ * @property {string} fiscalKey
+ * @property {string} recipient
+ * @property {{city: string, state: string}} destination
+ * @property {string} status
+ * @property {TrackingEvent[]} events
+ * @property {{url: string, label: string} | null} proof
+ */
+
 export {}
