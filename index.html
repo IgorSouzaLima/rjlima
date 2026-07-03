@@ -351,13 +351,16 @@
 
         <section id="orcamento" class="py-24 bg-black">
             <div class="container mx-auto px-6">
-                <div class="max-w-4xl mx-auto glass p-10 rounded-3xl relative overflow-hidden">
+                <div class="max-w-6xl mx-auto glass p-6 md:p-10 rounded-3xl relative overflow-hidden">
                     <div class="absolute top-0 right-0 p-10 opacity-10 pointer-events-none"><i class="fas fa-truck-ramp-box text-9xl"></i></div>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Precisa de um parceiro logístico para sua operação?</h2>
-                    <p class="text-gray-400 mb-6 max-w-2xl">Fale com a RJ Lima e solicite uma análise da sua demanda de transporte.</p>
+                    <div class="relative z-10 mb-8">
+                        <span class="text-red-500 font-bold tracking-[0.18em] uppercase text-xs">Cotação de frete</span>
+                        <h2 class="text-3xl md:text-4xl font-bold mt-3 mb-4">Solicite uma análise da sua carga</h2>
+                        <p class="text-gray-400 max-w-2xl">Preencha os dados principais para a RJ Lima avaliar rota, peso, volumes, valor da nota e melhor formato de transporte.</p>
+                    </div>
                     <div class="quote-assurance">
                         <i class="fas fa-route"></i>
-                        <span>Retornamos com uma análise da rota, tipo de carga e melhor formato de transporte para a operação.</span>
+                        <span>Quanto mais completo o pedido, mais rápido conseguimos retornar com uma cotação viável para a operação.</span>
                     </div>
 
                     <form id="quoteForm" class="grid md:grid-cols-2 gap-6 relative z-10">
@@ -387,6 +390,10 @@
                             <input type="text" id="segmento" name="segmento" autocomplete="organization-title" class="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:border-red-600 outline-none transition" placeholder="Ex: pet, bioinsumos, distribuidora, indústria">
                         </div>
                         <div class="space-y-2">
+                            <label for="tipo_carga" class="text-sm font-semibold text-gray-400">Tipo de carga</label>
+                            <input type="text" id="tipo_carga" name="tipo_carga" required class="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:border-red-600 outline-none transition" placeholder="Ex: caixas, paletes, sacarias, tambores">
+                        </div>
+                        <div class="space-y-2">
                             <label for="origem" class="text-sm font-semibold text-gray-400">Origem</label>
                             <input type="text" id="origem" name="origem" required autocomplete="address-level2" class="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:border-red-600 outline-none transition" placeholder="Cidade / Estado">
                         </div>
@@ -394,15 +401,27 @@
                             <label for="destino" class="text-sm font-semibold text-gray-400">Destino</label>
                             <input type="text" id="destino" name="destino" required autocomplete="address-level2" class="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:border-red-600 outline-none transition" placeholder="Cidade / Estado">
                         </div>
+                        <div class="space-y-2">
+                            <label for="peso" class="text-sm font-semibold text-gray-400">Peso aproximado</label>
+                            <input type="text" id="peso" name="peso" required inputmode="decimal" class="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:border-red-600 outline-none transition" placeholder="Ex: 850 kg">
+                        </div>
+                        <div class="space-y-2">
+                            <label for="volumes" class="text-sm font-semibold text-gray-400">Volumes</label>
+                            <input type="text" id="volumes" name="volumes" required inputmode="numeric" class="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:border-red-600 outline-none transition" placeholder="Ex: 12 caixas ou 2 paletes">
+                        </div>
+                        <div class="space-y-2">
+                            <label for="valor_nf" class="text-sm font-semibold text-gray-400">Valor da NF</label>
+                            <input type="text" id="valor_nf" name="valor_nf" inputmode="decimal" class="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:border-red-600 outline-none transition" placeholder="Ex: R$ 18.500,00">
+                        </div>
                         <div class="md:col-span-2 space-y-2">
                             <label for="descricao" class="text-sm font-semibold text-gray-400">Descrição da carga</label>
-                            <textarea id="descricao" name="descricao" required class="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:border-red-600 outline-none transition h-32" placeholder="Informe tipo de carga, peso aproximado, frequência, prazo desejado e observações da operação."></textarea>
+                            <textarea id="descricao" name="descricao" class="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:border-red-600 outline-none transition h-32" placeholder="Informe frequência, prazo desejado, necessidade de coleta, restrições de entrega e observações da operação."></textarea>
                         </div>
                         <div class="md:col-span-2 flex flex-wrap gap-4">
                             <button type="submit" class="red-gradient px-8 py-4 rounded-xl font-bold hover:scale-[1.01] active:scale-95 transition shadow-xl shadow-red-900/30">
                                 <i class="fas fa-paper-plane mr-2"></i> Solicitar cotação
                             </button>
-                            <a href="https://wa.me/5535999581894?text=Ol%C3%A1%2C%20quero%20falar%20com%20a%20RJ%20Lima%20sobre%20uma%20demanda%20de%20transporte." target="_blank" rel="noopener noreferrer" class="border border-white/15 px-8 py-4 rounded-xl font-bold flex items-center hover:border-gold hover:text-gold transition">
+                            <a id="quoteWhatsapp" href="https://wa.me/5535999581894?text=Ol%C3%A1%2C%20quero%20cotar%20um%20frete%20com%20a%20RJ%20Lima." target="_blank" rel="noopener noreferrer" class="border border-white/15 px-8 py-4 rounded-xl font-bold flex items-center hover:border-gold hover:text-gold transition">
                                 <i class="fab fa-whatsapp mr-2"></i> Falar pelo WhatsApp
                             </a>
                         </div>

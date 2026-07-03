@@ -29,6 +29,36 @@ function closeMenu() {
   icon.classList.remove('fa-times')
 }
 
+function getInputValue(id, fallback = 'Nao informado') {
+  return document.getElementById(id)?.value?.trim() || fallback
+}
+
+function buildQuoteWhatsappUrl() {
+  const message = [
+    'Ola, quero cotar um frete com a RJ Lima.',
+    '',
+    `Empresa/Nome: ${getInputValue('nome')}`,
+    `Telefone: ${getInputValue('telefone')}`,
+    `Perfil: ${getInputValue('perfil')}`,
+    `Segmento: ${getInputValue('segmento')}`,
+    `Tipo de carga: ${getInputValue('tipo_carga')}`,
+    `Origem: ${getInputValue('origem')}`,
+    `Destino: ${getInputValue('destino')}`,
+    `Peso aproximado: ${getInputValue('peso')}`,
+    `Volumes: ${getInputValue('volumes')}`,
+    `Valor da NF: ${getInputValue('valor_nf')}`,
+    `Observacoes: ${getInputValue('descricao', 'Sem observacoes adicionais')}`
+  ].join('\n')
+
+  return `https://wa.me/5535999581894?text=${encodeURIComponent(message)}`
+}
+
+function updateQuoteWhatsappLink() {
+  const link = document.getElementById('quoteWhatsapp')
+  if (!link) return
+  link.href = buildQuoteWhatsappUrl()
+}
+
 // Handle Form submission via EmailJS
 async function handleFormSubmit(e) {
   e.preventDefault()
@@ -36,18 +66,26 @@ async function handleFormSubmit(e) {
   const honeypot = e.target.querySelector('input[name="empresa_site"]')
   if (honeypot?.value) return
 
-  const nome = document.getElementById('nome').value
-  const tel = document.getElementById('telefone').value
-  const perfil = document.getElementById('perfil')?.value || 'Nao informado'
-  const segmento = document.getElementById('segmento')?.value || 'Nao informado'
-  const origem = document.getElementById('origem').value
-  const destino = document.getElementById('destino').value
-  const desc = document.getElementById('descricao').value
+  const nome = getInputValue('nome')
+  const tel = getInputValue('telefone')
+  const perfil = getInputValue('perfil')
+  const segmento = getInputValue('segmento')
+  const tipoCarga = getInputValue('tipo_carga')
+  const origem = getInputValue('origem')
+  const destino = getInputValue('destino')
+  const peso = getInputValue('peso')
+  const volumes = getInputValue('volumes')
+  const valorNf = getInputValue('valor_nf')
+  const desc = getInputValue('descricao', 'Sem observacoes adicionais')
   const detailedDescription = [
     `Perfil da demanda: ${perfil}`,
     `Carga ou segmento: ${segmento}`,
+    `Tipo de carga: ${tipoCarga}`,
     `Origem: ${origem}`,
     `Destino: ${destino}`,
+    `Peso aproximado: ${peso}`,
+    `Volumes: ${volumes}`,
+    `Valor da NF: ${valorNf}`,
     '',
     desc
   ].join('\n')
@@ -57,8 +95,12 @@ async function handleFormSubmit(e) {
     telefone: tel,
     perfil,
     segmento,
+    tipo_carga: tipoCarga,
     origem,
     destino,
+    peso,
+    volumes,
+    valor_nf: valorNf,
     descricao: detailedDescription
   }
 
@@ -96,7 +138,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const quoteForm = document.getElementById('quoteForm')
   if (quoteForm) {
     quoteForm.addEventListener('submit', handleFormSubmit)
+    quoteForm.addEventListener('input', updateQuoteWhatsappLink)
+    quoteForm.addEventListener('change', updateQuoteWhatsappLink)
   }
+  updateQuoteWhatsappLink()
 
   const currentYear = document.getElementById('currentYear')
   if (currentYear) {
