@@ -1,0 +1,1034 @@
+[
+  {
+    "city": "Aguanil",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Alagoa",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "Albertina",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Alfenas",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Alpinópolis",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Alterosa",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Andradas",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Andrelândia",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "Arantina",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "Arceburgo",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "Areado",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "Baependi",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Bandeira do Sul",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Boa Esperança",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Bocaina de Minas",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "Bom Jardim de Minas",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "Bom Jesus da Penha",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "Bom Repouso",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Bom Sucesso",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Borda da Mata",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Botelhos",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Brazópolis",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "Bueno Brandão",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "Cabo Verde",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "Cachoeira de Minas",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Caldas",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "Camacho",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Camanducaia",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Cambuí",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Cambuquira",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Campanha",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Campestre",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Campo Belo",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Campo do Meio",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Campos Gerais",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Cana Verde",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "Candeias",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Capetinga",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Careaçu",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Carmo da Cachoeira",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Carmo de Minas",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Carmo do Rio Claro",
+    "state": "MG",
+    "days": 4,
+    "regular": true
+  },
+  {
+    "city": "Carrancas",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "Carvalhópolis",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Carvalhos",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Cássia",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Caxambu",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Claraval",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Conceição da Aparecida",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Conceição das Pedras",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Conceição do Rio Verde",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Conceição dos Ouros",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "Congonhal",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Consolação",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Contagem",
+    "state": "MG",
+    "days": 2,
+    "regular": true
+  },
+  {
+    "city": "Coqueiral",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Cordislândia",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Córrego do Bom Jesus",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Cristais",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Cristina",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Cruzília",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Delfim Moreira",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Delfinópolis",
+    "state": "MG",
+    "days": 4,
+    "regular": true
+  },
+  {
+    "city": "Divisa Nova",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Dom Bosco",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Dom Viçoso",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Elói Mendes",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Espírito Santo do Dourado",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "Estiva",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Extrema",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Fama",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Fortaleza de Minas",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Gonçalves",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "Guapé",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "Guaranésia",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Guaxupé",
+    "state": "MG",
+    "days": 4,
+    "regular": true
+  },
+  {
+    "city": "Heliodora",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Ibiá",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Ibiraci",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "Ibitiúra de Minas",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "Ibituruna",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "Ijaci",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "Ilicínea",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Inconfidentes",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Ingaí",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Ipuiúna",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "Itajubá",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Itamogi",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Itamonte",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Itanhandu",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Itapeva",
+    "state": "MG",
+    "days": 4,
+    "regular": true
+  },
+  {
+    "city": "Itaú de Minas",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Itumirim",
+    "state": "MG",
+    "days": 4,
+    "regular": true
+  },
+  {
+    "city": "Itutinga",
+    "state": "MG",
+    "days": 4,
+    "regular": true
+  },
+  {
+    "city": "Jacuí",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Jacutinga",
+    "state": "MG",
+    "days": 4,
+    "regular": true
+  },
+  {
+    "city": "Jesuânia",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Juruaia",
+    "state": "MG",
+    "days": 4,
+    "regular": true
+  },
+  {
+    "city": "Lambari",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Lavras",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Liberdade",
+    "state": "MG",
+    "days": 4,
+    "regular": true
+  },
+  {
+    "city": "Luminárias",
+    "state": "MG",
+    "days": 4,
+    "regular": true
+  },
+  {
+    "city": "Machado",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Maria da Fé",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "Marmelópolis",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "Mercês",
+    "state": "MG",
+    "days": 6,
+    "regular": true
+  },
+  {
+    "city": "Minduri",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Monsenhor Paulo",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Monte Belo",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "Monte Santo de Minas",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Monte Sião",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "Munhoz",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Muzambinho",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Natércia",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Nazareno",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Nepomuceno",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Nova Resende",
+    "state": "MG",
+    "days": 4,
+    "regular": true
+  },
+  {
+    "city": "Olímpio Noronha",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Ouro Fino",
+    "state": "MG",
+    "days": 4,
+    "regular": true
+  },
+  {
+    "city": "Paraguaçu",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Paraisópolis",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Passa Quatro",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Passos",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Pedralva",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Perdões",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Piranguçu",
+    "state": "MG",
+    "days": 4,
+    "regular": true
+  },
+  {
+    "city": "Piranguinho",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Poço Fundo",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Poços de Caldas",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Pouso Alegre",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Pouso Alto",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Pratápolis",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Ribeirão Vermelho",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Santa Rita de Caldas",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "Santa Rita do Sapucaí",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Santana da Vargem",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Santana do Jacaré",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Santo Antônio do Amparo",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "São Bento Abade",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "São Gonçalo do Sapucaí",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "São João Batista do Glória",
+    "state": "MG",
+    "days": 4,
+    "regular": true
+  },
+  {
+    "city": "São João da Mata",
+    "state": "MG",
+    "days": 4,
+    "regular": true
+  },
+  {
+    "city": "São José da Barra",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "São José do Alegre",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "São Lourenço",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "São Pedro da União",
+    "state": "MG",
+    "days": 4,
+    "regular": true
+  },
+  {
+    "city": "São Sebastião da Bela Vista",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "São Sebastião do Paraíso",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "São Sebastião do Rio Verde",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "São Thomé das Letras",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "São Tomás de Aquino",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "São Vicente de Minas",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "Sapucaí-Mirim",
+    "state": "MG",
+    "days": 4,
+    "regular": true
+  },
+  {
+    "city": "Senador Amaral",
+    "state": "MG",
+    "days": 4,
+    "regular": true
+  },
+  {
+    "city": "Senador José Bento",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Seritinga",
+    "state": "MG",
+    "days": 4,
+    "regular": true
+  },
+  {
+    "city": "Serrania",
+    "state": "MG",
+    "days": 4,
+    "regular": true
+  },
+  {
+    "city": "Serranos",
+    "state": "MG",
+    "days": 4,
+    "regular": true
+  },
+  {
+    "city": "Silvianópolis",
+    "state": "MG",
+    "days": 4,
+    "regular": true
+  },
+  {
+    "city": "Soledade de Minas",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Tocos do Moji",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "Toledo",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "Três Corações",
+    "state": "MG",
+    "days": 2,
+    "regular": true
+  },
+  {
+    "city": "Três Pontas",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Turvolândia",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Varginha",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Virgínia",
+    "state": "MG",
+    "days": 3,
+    "regular": true
+  },
+  {
+    "city": "Wenceslau Braz",
+    "state": "MG",
+    "days": 5,
+    "regular": true
+  },
+  {
+    "city": "Belo Horizonte",
+    "state": "MG",
+    "days": 0,
+    "regular": false
+  },
+  {
+    "city": "São Paulo",
+    "state": "SP",
+    "days": 0,
+    "regular": false
+  },
+  {
+    "city": "Vitória",
+    "state": "ES",
+    "days": 0,
+    "regular": false
+  },
+  {
+    "city": "Curitiba",
+    "state": "PR",
+    "days": 0,
+    "regular": false
+  }
+]

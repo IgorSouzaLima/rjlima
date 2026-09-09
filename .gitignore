@@ -25,3 +25,9 @@ Thumbs.db
 
 # Local brainstorming companion artifacts
 .superpowers
+
+# Next.js and generated legacy bundles
+.next
+.vercel
+public/legacy
+*.tsbuildinfo

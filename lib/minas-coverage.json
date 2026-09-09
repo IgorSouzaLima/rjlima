@@ -1,0 +1,1692 @@
+{
+  "path": "M321.57,229.54L319.69,230.92L317.79,231.4L317.7,231.6L315.82,232.72L314.3,231.31L310.11,229.32L309.17,228.95L307.71,229.87L301.17,229.25L298.38,229.48L295.64,228.44L294.77,228.82L292.79,230.57L289.61,230.82L288.7,233.22L287.79,234.13L286.1,235.7L283.73,233.43L282.45,233.6L278.77,235.14L278.05,235.14L277.27,235.9L272.37,234.96L271.3,236.52L267.32,236.79L265.59,238.47L263.06,242.04L261.76,245.97L259.45,246.77L257.61,247.93L257.46,248.51L255.63,250.67L254.63,253.16L255.68,254.28L253.39,254.15L253.48,256.88L251.22,259.14L251.32,261.34L252.01,267.91L254.41,265.79L255.29,265.28L258.59,264.14L260.11,262.91L261.2,261.85L263.46,261.24L265.9,263.09L269.37,263.23L270.75,263.2L272.05,264.14L274.94,264.6L278.22,264.32L281.07,264.22L284.41,265.51L288.68,265.32L287.51,268.61L288.36,271.13L288.48,271.78L290.07,273.02L291.39,272.04L292.54,269.43L294.21,269.81L294.69,275.0L296.3,275.76L296.7,274.91L296.28,272.14L297.64,269.6L299.58,269.35L301.31,269.73L303.61,268.98L305.41,268.81L310.29,268.85L310.6,267.02L313.26,269.31L315.26,266.81L316.97,268.81L317.59,267.7L317.99,265.78L319.84,265.69L322.41,267.06L324.31,265.86L325.56,265.32L328.92,268.57L330.97,270.89L330.94,271.08L330.02,272.51L329.66,275.35L331.13,276.97L332.79,278.08L332.93,278.53L332.82,278.63L333.7,281.24L331.91,282.34L331.06,285.13L331.05,285.15L332.01,287.33L332.71,289.16L333.35,291.81L333.33,292.54L334.89,294.37L335.88,296.39L335.57,297.85L338.23,297.52L340.39,296.69L340.74,296.46L343.19,296.89L343.85,298.03L346.1,299.36L346.04,301.08L345.14,303.06L343.89,303.58L343.55,305.66L342.29,307.21L343.82,310.77L343.15,311.09L341.69,312.76L344.22,313.96L343.24,314.96L342.69,314.91L342.51,315.77L341.61,317.81L342.91,319.16L343.85,320.8L345.24,321.5L347.2,322.69L347.87,324.45L348.52,325.89L346.85,326.85L349.79,328.24L348.91,329.46L349.53,331.4L352.73,330.49L355.7,331.21L357.67,330.14L359.46,330.63L361.62,329.82L362.79,328.32L360.84,327.58L363.17,325.64L362.41,324.89L363.49,323.86L363.75,325.63L365.63,324.5L365.55,325.66L367.64,324.25L368.9,324.95L369.33,325.68L372.07,324.72L374.21,322.89L375.1,322.13L375.55,321.97L378.42,321.63L380.98,320.56L381.7,320.06L381.7,320.03L381.82,319.79L384.7,319.31L384.79,319.49L387.26,318.4L389.08,316.7L391.12,316.62L393.21,316.94L394.69,316.32L394.89,316.05L399.13,314.19L403.59,312.31L404.75,312.59L405.6,312.83L407.21,312.14L410.45,312.24L412.34,310.97L412.76,311.06L414.83,311.53L416.85,311.54L416.86,311.67L416.62,313.24L419.55,311.62L421.49,310.67L426.61,308.02L427.85,307.41L430.84,306.05L430.92,306.02L432.63,305.2L434.96,304.44L433.16,301.67L433.3,301.47L435.21,299.31L434.78,297.97L435.61,296.07L435.85,295.95L436.3,293.33L436.46,291.96L436.89,291.32L438.06,290.04L438.87,289.04L438.77,288.88L437.39,287.78L441.05,286.92L442.02,284.86L442.05,283.75L443.17,283.12L443.67,281.44L444.2,276.79L444.75,276.65L444.66,275.43L443.97,275.13L443.49,274.33L444.27,272.94L445.26,271.81L445.64,270.62L447.54,270.62L452.79,270.63L452.87,270.6L455.25,264.61L455.81,264.71L457.58,263.58L457.84,260.82L457.96,258.7L462.08,254.99L462.2,253.18L462.91,249.35L462.85,248.72L462.24,246.49L460.22,245.03L460.13,242.56L458.62,241.36L456.4,240.54L456.62,239.29L458.42,239.31L460.96,240.18L463.24,239.7L462.72,236.94L460.43,235.69L460.95,233.33L461.01,231.78L457.68,231.39L458.47,230.63L458.16,228.49L460.41,225.33L466.24,224.06L463.54,221.39L465.71,220.74L468.57,221.97L471.4,219.31L474.72,219.99L477.78,221.26L478.0,219.38L477.75,215.84L477.41,215.86L475.23,213.24L473.76,213.11L472.32,210.44L471.56,209.54L469.77,207.54L470.97,205.95L470.32,203.01L472.13,197.26L473.36,197.26L473.9,197.51L474.03,197.32L476.54,197.56L476.01,193.09L475.88,192.69L476.67,190.39L479.13,190.53L480.13,187.68L482.08,185.47L484.16,184.08L485.44,180.36L484.22,177.88L482.35,177.92L479.77,175.86L477.5,173.6L473.54,173.65L473.01,172.69L471.55,173.47L468.93,171.98L467.76,170.64L466.36,171.66L465.33,170.21L458.51,172.92L454.58,172.29L454.33,170.01L453.91,166.89L453.86,166.85L451.94,165.05L445.58,159.14L444.69,158.32L444.52,158.34L441.52,159.96L439.53,159.85L436.92,158.01L434.98,158.86L434.73,158.61L430.51,156.45L429.74,155.77L427.59,154.84L422.28,151.04L420.88,149.82L415.93,148.58L413.08,148.99L409.4,151.6L408.48,152.14L408.48,152.14L404.68,149.97L401.09,148.61L401.14,146.66L402.46,142.88L403.19,141.84L399.29,140.43L397.7,140.64L392.45,139.98L390.03,140.59L386.98,141.79L383.12,144.6L381.2,145.31L380.28,147.46L376.86,149.22L375.7,150.79L373.4,150.61L371.3,152.54L364.78,156.45L362.21,158.76L357.35,159.48L355.14,161.89L357.47,155.4L355.97,153.43L355.93,153.44L353.06,155.05L350.07,153.98L350.01,152.13L346.21,149.73L345.02,152.13L346.23,157.25L345.74,157.37L343.66,158.09L338.81,156.37L337.38,157.39L337.13,160.59L338.46,162.34L338.96,164.24L337.27,165.76L336.94,168.38L338.27,169.39L339.87,175.06L336.81,176.06L332.95,176.3L329.32,178.67L329.35,178.97L329.05,182.44L326.29,188.02L327.17,190.42L329.62,191.54L331.08,193.61L331.45,196.98L333.14,199.26L332.0,201.13L328.44,203.38L325.58,207.37L325.11,206.88L324.82,208.76L324.57,209.75L326.03,211.44L329.25,211.65L330.27,213.14L328.04,217.98L329.88,222.59L327.27,224.82L326.81,225.33L323.1,227.12L323.03,228.65L321.57,229.54Z",
+  "bounds": {
+    "x": 251.22,
+    "y": 139.98,
+    "width": 234.22,
+    "height": 191.42
+  },
+  "cities": [
+    {
+      "city": "Aguanil",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -20.9439,
+      "lon": -45.3915,
+      "x": 369.505,
+      "y": 287.107
+    },
+    {
+      "city": "Alagoa",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -22.171,
+      "lon": -44.6413,
+      "x": 385.221,
+      "y": 314.747
+    },
+    {
+      "city": "Albertina",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.2018,
+      "lon": -46.6139,
+      "x": 343.896,
+      "y": 315.444
+    },
+    {
+      "city": "Alfenas",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.4256,
+      "lon": -45.9477,
+      "x": 357.853,
+      "y": 297.929
+    },
+    {
+      "city": "Alpinópolis",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -20.8631,
+      "lon": -46.3878,
+      "x": 348.633,
+      "y": 285.295
+    },
+    {
+      "city": "Alterosa",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.2488,
+      "lon": -46.1387,
+      "x": 353.852,
+      "y": 293.953
+    },
+    {
+      "city": "Andradas",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.0695,
+      "lon": -46.5724,
+      "x": 344.766,
+      "y": 312.452
+    },
+    {
+      "city": "Andrelândia",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -21.7411,
+      "lon": -44.3117,
+      "x": 392.126,
+      "y": 305.037
+    },
+    {
+      "city": "Arantina",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -21.9102,
+      "lon": -44.2555,
+      "x": 393.303,
+      "y": 308.853
+    },
+    {
+      "city": "Arceburgo",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -21.359,
+      "lon": -46.9401,
+      "x": 337.063,
+      "y": 296.431
+    },
+    {
+      "city": "Areado",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -21.3572,
+      "lon": -46.1421,
+      "x": 353.78,
+      "y": 296.39
+    },
+    {
+      "city": "Baependi",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.957,
+      "lon": -44.8874,
+      "x": 380.065,
+      "y": 309.91
+    },
+    {
+      "city": "Bandeira do Sul",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.7308,
+      "lon": -46.3833,
+      "x": 348.727,
+      "y": 304.804
+    },
+    {
+      "city": "Boa Esperança",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.0927,
+      "lon": -45.5612,
+      "x": 365.95,
+      "y": 290.446
+    },
+    {
+      "city": "Bocaina de Minas",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -22.1697,
+      "lon": -44.3972,
+      "x": 390.335,
+      "y": 314.717
+    },
+    {
+      "city": "Bom Jardim de Minas",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -21.9479,
+      "lon": -44.1885,
+      "x": 394.707,
+      "y": 309.704
+    },
+    {
+      "city": "Bom Jesus da Penha",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -21.0148,
+      "lon": -46.5174,
+      "x": 345.918,
+      "y": 288.697
+    },
+    {
+      "city": "Bom Repouso",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.4675,
+      "lon": -46.144,
+      "x": 353.74,
+      "y": 321.461
+    },
+    {
+      "city": "Bom Sucesso",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.0329,
+      "lon": -44.7537,
+      "x": 382.866,
+      "y": 289.104
+    },
+    {
+      "city": "Borda da Mata",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.2707,
+      "lon": -46.1653,
+      "x": 353.294,
+      "y": 317.003
+    },
+    {
+      "city": "Botelhos",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.6412,
+      "lon": -46.391,
+      "x": 348.566,
+      "y": 302.784
+    },
+    {
+      "city": "Brazópolis",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -22.4743,
+      "lon": -45.6166,
+      "x": 364.789,
+      "y": 321.615
+    },
+    {
+      "city": "Bueno Brandão",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -22.4383,
+      "lon": -46.3491,
+      "x": 349.444,
+      "y": 320.799
+    },
+    {
+      "city": "Cabo Verde",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -21.4699,
+      "lon": -46.3919,
+      "x": 348.547,
+      "y": 298.926
+    },
+    {
+      "city": "Cachoeira de Minas",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.3511,
+      "lon": -45.7809,
+      "x": 361.347,
+      "y": 318.824
+    },
+    {
+      "city": "Caldas",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -21.9183,
+      "lon": -46.3843,
+      "x": 348.706,
+      "y": 309.036
+    },
+    {
+      "city": "Camacho",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -20.6294,
+      "lon": -45.1593,
+      "x": 374.369,
+      "y": 280.06
+    },
+    {
+      "city": "Camanducaia",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.7515,
+      "lon": -46.1494,
+      "x": 353.627,
+      "y": 327.906
+    },
+    {
+      "city": "Cambuí",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.6115,
+      "lon": -46.0572,
+      "x": 355.559,
+      "y": 324.727
+    },
+    {
+      "city": "Cambuquira",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.854,
+      "lon": -45.2896,
+      "x": 371.64,
+      "y": 307.584
+    },
+    {
+      "city": "Campanha",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.836,
+      "lon": -45.4004,
+      "x": 369.318,
+      "y": 307.178
+    },
+    {
+      "city": "Campestre",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.7079,
+      "lon": -46.2381,
+      "x": 351.769,
+      "y": 304.288
+    },
+    {
+      "city": "Campo Belo",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -20.8932,
+      "lon": -45.2699,
+      "x": 372.052,
+      "y": 285.97
+    },
+    {
+      "city": "Campo do Meio",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.1127,
+      "lon": -45.8273,
+      "x": 360.375,
+      "y": 290.895
+    },
+    {
+      "city": "Campos Gerais",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.237,
+      "lon": -45.7569,
+      "x": 361.85,
+      "y": 293.688
+    },
+    {
+      "city": "Cana Verde",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -21.0232,
+      "lon": -45.1801,
+      "x": 373.933,
+      "y": 288.886
+    },
+    {
+      "city": "Candeias",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -20.7692,
+      "lon": -45.2765,
+      "x": 371.914,
+      "y": 283.19
+    },
+    {
+      "city": "Capetinga",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -20.6163,
+      "lon": -47.0571,
+      "x": 334.612,
+      "y": 279.766
+    },
+    {
+      "city": "Careaçu",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.0424,
+      "lon": -45.696,
+      "x": 363.126,
+      "y": 311.839
+    },
+    {
+      "city": "Carmo da Cachoeira",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.4633,
+      "lon": -45.2201,
+      "x": 373.096,
+      "y": 298.778
+    },
+    {
+      "city": "Carmo de Minas",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.1204,
+      "lon": -45.1307,
+      "x": 374.968,
+      "y": 313.602
+    },
+    {
+      "city": "Carmo do Rio Claro",
+      "state": "MG",
+      "days": 4,
+      "regular": true,
+      "lat": -20.9736,
+      "lon": -46.1149,
+      "x": 354.35,
+      "y": 287.773
+    },
+    {
+      "city": "Carrancas",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -21.4898,
+      "lon": -44.6446,
+      "x": 385.152,
+      "y": 299.374
+    },
+    {
+      "city": "Carvalhópolis",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.7735,
+      "lon": -45.8421,
+      "x": 360.065,
+      "y": 305.767
+    },
+    {
+      "city": "Carvalhos",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22,
+      "lon": -44.4632,
+      "x": 388.952,
+      "y": 310.881
+    },
+    {
+      "city": "Cássia",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -20.5831,
+      "lon": -46.9201,
+      "x": 337.482,
+      "y": 279.023
+    },
+    {
+      "city": "Caxambu",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.9753,
+      "lon": -44.9319,
+      "x": 379.133,
+      "y": 310.323
+    },
+    {
+      "city": "Claraval",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -20.397,
+      "lon": -47.2768,
+      "x": 330.009,
+      "y": 274.861
+    },
+    {
+      "city": "Conceição da Aparecida",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.096,
+      "lon": -46.2049,
+      "x": 352.465,
+      "y": 290.52
+    },
+    {
+      "city": "Conceição das Pedras",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.1576,
+      "lon": -45.4562,
+      "x": 368.149,
+      "y": 314.444
+    },
+    {
+      "city": "Conceição do Rio Verde",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.8778,
+      "lon": -45.087,
+      "x": 375.884,
+      "y": 308.121
+    },
+    {
+      "city": "Conceição dos Ouros",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -22.4078,
+      "lon": -45.7996,
+      "x": 360.955,
+      "y": 320.108
+    },
+    {
+      "city": "Congonhal",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.1488,
+      "lon": -46.043,
+      "x": 355.856,
+      "y": 314.245
+    },
+    {
+      "city": "Consolação",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.5493,
+      "lon": -45.9255,
+      "x": 358.318,
+      "y": 323.316
+    },
+    {
+      "city": "Contagem",
+      "state": "MG",
+      "days": 2,
+      "regular": true,
+      "lat": -19.9321,
+      "lon": -44.0539,
+      "x": 397.527,
+      "y": 264.486
+    },
+    {
+      "city": "Coqueiral",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.1858,
+      "lon": -45.4366,
+      "x": 368.56,
+      "y": 292.537
+    },
+    {
+      "city": "Cordislândia",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.7891,
+      "lon": -45.6999,
+      "x": 363.044,
+      "y": 306.119
+    },
+    {
+      "city": "Córrego do Bom Jesus",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.6269,
+      "lon": -46.0241,
+      "x": 356.252,
+      "y": 325.077
+    },
+    {
+      "city": "Cristais",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -20.8733,
+      "lon": -45.5167,
+      "x": 366.882,
+      "y": 285.523
+    },
+    {
+      "city": "Cristina",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.208,
+      "lon": -45.2673,
+      "x": 372.107,
+      "y": 315.584
+    },
+    {
+      "city": "Cruzília",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.84,
+      "lon": -44.8067,
+      "x": 381.756,
+      "y": 307.268
+    },
+    {
+      "city": "Delfim Moreira",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.5036,
+      "lon": -45.2792,
+      "x": 371.857,
+      "y": 322.28
+    },
+    {
+      "city": "Delfinópolis",
+      "state": "MG",
+      "days": 4,
+      "regular": true,
+      "lat": -20.3468,
+      "lon": -46.8456,
+      "x": 339.042,
+      "y": 273.74
+    },
+    {
+      "city": "Divisa Nova",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.5092,
+      "lon": -46.1904,
+      "x": 352.768,
+      "y": 299.811
+    },
+    {
+      "city": "Dom Bosco",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -16.652,
+      "lon": -46.2597,
+      "x": 351.317,
+      "y": 192.104
+    },
+    {
+      "city": "Dom Viçoso",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.2511,
+      "lon": -45.1643,
+      "x": 374.264,
+      "y": 316.559
+    },
+    {
+      "city": "Elói Mendes",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.6088,
+      "lon": -45.5691,
+      "x": 365.784,
+      "y": 302.054
+    },
+    {
+      "city": "Espírito Santo do Dourado",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -22.0454,
+      "lon": -45.9548,
+      "x": 357.704,
+      "y": 311.907
+    },
+    {
+      "city": "Estiva",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.4577,
+      "lon": -46.0191,
+      "x": 356.357,
+      "y": 321.239
+    },
+    {
+      "city": "Extrema",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.854,
+      "lon": -46.3178,
+      "x": 350.099,
+      "y": 330.235
+    },
+    {
+      "city": "Fama",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.4089,
+      "lon": -45.8286,
+      "x": 360.348,
+      "y": 297.553
+    },
+    {
+      "city": "Fortaleza de Minas",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -20.8508,
+      "lon": -46.712,
+      "x": 341.841,
+      "y": 285.019
+    },
+    {
+      "city": "Gonçalves",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -22.6545,
+      "lon": -45.8556,
+      "x": 359.782,
+      "y": 325.703
+    },
+    {
+      "city": "Guapé",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -20.7631,
+      "lon": -45.9152,
+      "x": 358.534,
+      "y": 283.054
+    },
+    {
+      "city": "Guaranésia",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.3009,
+      "lon": -46.7964,
+      "x": 340.073,
+      "y": 295.124
+    },
+    {
+      "city": "Guaxupé",
+      "state": "MG",
+      "days": 4,
+      "regular": true,
+      "lat": -21.305,
+      "lon": -46.7081,
+      "x": 341.923,
+      "y": 295.216
+    },
+    {
+      "city": "Heliodora",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.0644,
+      "lon": -45.5453,
+      "x": 366.283,
+      "y": 312.336
+    },
+    {
+      "city": "Ibiá",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -19.4749,
+      "lon": -46.5474,
+      "x": 345.29,
+      "y": 254.313
+    },
+    {
+      "city": "Ibiraci",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -20.4611,
+      "lon": -47.1222,
+      "x": 333.248,
+      "y": 276.294
+    },
+    {
+      "city": "Ibitiúra de Minas",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -22.0604,
+      "lon": -46.4368,
+      "x": 347.607,
+      "y": 312.246
+    },
+    {
+      "city": "Ibituruna",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -21.1541,
+      "lon": -44.7479,
+      "x": 382.988,
+      "y": 291.825
+    },
+    {
+      "city": "Ijaci",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -21.1738,
+      "lon": -44.9233,
+      "x": 379.313,
+      "y": 292.267
+    },
+    {
+      "city": "Ilicínea",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -20.9402,
+      "lon": -45.8308,
+      "x": 360.302,
+      "y": 287.024
+    },
+    {
+      "city": "Inconfidentes",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.3136,
+      "lon": -46.3264,
+      "x": 349.919,
+      "y": 317.974
+    },
+    {
+      "city": "Ingaí",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.4024,
+      "lon": -44.9152,
+      "x": 379.483,
+      "y": 297.407
+    },
+    {
+      "city": "Ipuiúna",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -22.1013,
+      "lon": -46.1915,
+      "x": 352.745,
+      "y": 313.171
+    },
+    {
+      "city": "Itajubá",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.4225,
+      "lon": -45.4598,
+      "x": 368.074,
+      "y": 320.441
+    },
+    {
+      "city": "Itamogi",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.0758,
+      "lon": -47.046,
+      "x": 334.844,
+      "y": 290.067
+    },
+    {
+      "city": "Itamonte",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.2859,
+      "lon": -44.868,
+      "x": 380.472,
+      "y": 317.347
+    },
+    {
+      "city": "Itanhandu",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.2942,
+      "lon": -44.9382,
+      "x": 379.001,
+      "y": 317.535
+    },
+    {
+      "city": "Itapeva",
+      "state": "MG",
+      "days": 4,
+      "regular": true,
+      "lat": -22.7665,
+      "lon": -46.2241,
+      "x": 352.062,
+      "y": 328.247
+    },
+    {
+      "city": "Itaú de Minas",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -20.7375,
+      "lon": -46.7525,
+      "x": 340.993,
+      "y": 282.48
+    },
+    {
+      "city": "Itumirim",
+      "state": "MG",
+      "days": 4,
+      "regular": true,
+      "lat": -21.3171,
+      "lon": -44.8724,
+      "x": 380.38,
+      "y": 295.488
+    },
+    {
+      "city": "Itutinga",
+      "state": "MG",
+      "days": 4,
+      "regular": true,
+      "lat": -21.3,
+      "lon": -44.6567,
+      "x": 384.898,
+      "y": 295.104
+    },
+    {
+      "city": "Jacuí",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.0137,
+      "lon": -46.7359,
+      "x": 341.341,
+      "y": 288.673
+    },
+    {
+      "city": "Jacutinga",
+      "state": "MG",
+      "days": 4,
+      "regular": true,
+      "lat": -22.286,
+      "lon": -46.6166,
+      "x": 343.84,
+      "y": 317.349
+    },
+    {
+      "city": "Jesuânia",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.9887,
+      "lon": -45.2911,
+      "x": 371.608,
+      "y": 310.626
+    },
+    {
+      "city": "Juruaia",
+      "state": "MG",
+      "days": 4,
+      "regular": true,
+      "lat": -21.2493,
+      "lon": -46.5735,
+      "x": 344.743,
+      "y": 293.964
+    },
+    {
+      "city": "Lambari",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.9671,
+      "lon": -45.3498,
+      "x": 370.378,
+      "y": 310.138
+    },
+    {
+      "city": "Lavras",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.248,
+      "lon": -45.0009,
+      "x": 377.688,
+      "y": 293.935
+    },
+    {
+      "city": "Liberdade",
+      "state": "MG",
+      "days": 4,
+      "regular": true,
+      "lat": -22.0275,
+      "lon": -44.3208,
+      "x": 391.935,
+      "y": 311.502
+    },
+    {
+      "city": "Luminárias",
+      "state": "MG",
+      "days": 4,
+      "regular": true,
+      "lat": -21.5145,
+      "lon": -44.9034,
+      "x": 379.73,
+      "y": 299.93
+    },
+    {
+      "city": "Machado",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.6778,
+      "lon": -45.9219,
+      "x": 358.393,
+      "y": 303.609
+    },
+    {
+      "city": "Maria da Fé",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -22.3044,
+      "lon": -45.3773,
+      "x": 369.802,
+      "y": 317.766
+    },
+    {
+      "city": "Marmelópolis",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -22.447,
+      "lon": -45.1645,
+      "x": 374.26,
+      "y": 320.996
+    },
+    {
+      "city": "Mercês",
+      "state": "MG",
+      "days": 6,
+      "regular": true,
+      "lat": -21.1976,
+      "lon": -43.3337,
+      "x": 412.614,
+      "y": 292.802
+    },
+    {
+      "city": "Minduri",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.6797,
+      "lon": -44.6051,
+      "x": 385.979,
+      "y": 303.652
+    },
+    {
+      "city": "Monsenhor Paulo",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.7579,
+      "lon": -45.5391,
+      "x": 366.413,
+      "y": 305.416
+    },
+    {
+      "city": "Monte Belo",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -21.3271,
+      "lon": -46.3635,
+      "x": 349.142,
+      "y": 295.713
+    },
+    {
+      "city": "Monte Santo de Minas",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.1873,
+      "lon": -46.9753,
+      "x": 336.325,
+      "y": 292.571
+    },
+    {
+      "city": "Monte Sião",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -22.4335,
+      "lon": -46.573,
+      "x": 344.753,
+      "y": 320.69
+    },
+    {
+      "city": "Munhoz",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.6092,
+      "lon": -46.362,
+      "x": 349.174,
+      "y": 324.675
+    },
+    {
+      "city": "Muzambinho",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.3692,
+      "lon": -46.5213,
+      "x": 345.836,
+      "y": 296.66
+    },
+    {
+      "city": "Natércia",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.1158,
+      "lon": -45.5123,
+      "x": 366.974,
+      "y": 313.498
+    },
+    {
+      "city": "Nazareno",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.2168,
+      "lon": -44.6138,
+      "x": 385.797,
+      "y": 293.234
+    },
+    {
+      "city": "Nepomuceno",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.2324,
+      "lon": -45.235,
+      "x": 372.783,
+      "y": 293.584
+    },
+    {
+      "city": "Nova Resende",
+      "state": "MG",
+      "days": 4,
+      "regular": true,
+      "lat": -21.1286,
+      "lon": -46.4157,
+      "x": 348.049,
+      "y": 291.252
+    },
+    {
+      "city": "Olímpio Noronha",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.0685,
+      "lon": -45.2657,
+      "x": 372.14,
+      "y": 312.429
+    },
+    {
+      "city": "Ouro Fino",
+      "state": "MG",
+      "days": 4,
+      "regular": true,
+      "lat": -22.2779,
+      "lon": -46.3716,
+      "x": 348.972,
+      "y": 317.166
+    },
+    {
+      "city": "Paraguaçu",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.5465,
+      "lon": -45.7374,
+      "x": 362.258,
+      "y": 300.651
+    },
+    {
+      "city": "Paraisópolis",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.5539,
+      "lon": -45.7803,
+      "x": 361.36,
+      "y": 323.42
+    },
+    {
+      "city": "Passa Quatro",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.3871,
+      "lon": -44.9709,
+      "x": 378.316,
+      "y": 319.639
+    },
+    {
+      "city": "Passos",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -20.7193,
+      "lon": -46.609,
+      "x": 343.999,
+      "y": 282.072
+    },
+    {
+      "city": "Pedralva",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.2386,
+      "lon": -45.4654,
+      "x": 367.957,
+      "y": 316.276
+    },
+    {
+      "city": "Perdões",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.0932,
+      "lon": -45.0896,
+      "x": 375.829,
+      "y": 290.457
+    },
+    {
+      "city": "Piranguçu",
+      "state": "MG",
+      "days": 4,
+      "regular": true,
+      "lat": -22.5249,
+      "lon": -45.4945,
+      "x": 367.347,
+      "y": 322.763
+    },
+    {
+      "city": "Piranguinho",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.395,
+      "lon": -45.5324,
+      "x": 366.553,
+      "y": 319.818
+    },
+    {
+      "city": "Poço Fundo",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.78,
+      "lon": -45.9658,
+      "x": 357.474,
+      "y": 305.914
+    },
+    {
+      "city": "Poços de Caldas",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.78,
+      "lon": -46.5692,
+      "x": 344.833,
+      "y": 305.914
+    },
+    {
+      "city": "Pouso Alegre",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.2266,
+      "lon": -45.9389,
+      "x": 358.037,
+      "y": 316.005
+    },
+    {
+      "city": "Pouso Alto",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.1964,
+      "lon": -44.9748,
+      "x": 378.234,
+      "y": 315.321
+    },
+    {
+      "city": "Pratápolis",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -20.7411,
+      "lon": -46.8624,
+      "x": 338.691,
+      "y": 282.561
+    },
+    {
+      "city": "Ribeirão Vermelho",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.1879,
+      "lon": -45.0637,
+      "x": 376.372,
+      "y": 292.584
+    },
+    {
+      "city": "Santa Rita de Caldas",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -22.0292,
+      "lon": -46.3385,
+      "x": 349.666,
+      "y": 311.541
+    },
+    {
+      "city": "Santa Rita do Sapucaí",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.2461,
+      "lon": -45.7034,
+      "x": 362.971,
+      "y": 316.446
+    },
+    {
+      "city": "Santana da Vargem",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.2449,
+      "lon": -45.5005,
+      "x": 367.221,
+      "y": 293.865
+    },
+    {
+      "city": "Santana do Jacaré",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -20.9007,
+      "lon": -45.1285,
+      "x": 375.014,
+      "y": 286.138
+    },
+    {
+      "city": "Santo Antônio do Amparo",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -20.943,
+      "lon": -44.9176,
+      "x": 379.433,
+      "y": 287.086
+    },
+    {
+      "city": "São Bento Abade",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.5839,
+      "lon": -45.0699,
+      "x": 376.242,
+      "y": 301.493
+    },
+    {
+      "city": "São Gonçalo do Sapucaí",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.8932,
+      "lon": -45.5893,
+      "x": 365.361,
+      "y": 308.469
+    },
+    {
+      "city": "São João Batista do Glória",
+      "state": "MG",
+      "days": 4,
+      "regular": true,
+      "lat": -20.635,
+      "lon": -46.508,
+      "x": 346.115,
+      "y": 280.185
+    },
+    {
+      "city": "São João da Mata",
+      "state": "MG",
+      "days": 4,
+      "regular": true,
+      "lat": -21.928,
+      "lon": -45.9297,
+      "x": 358.23,
+      "y": 309.255
+    },
+    {
+      "city": "São José da Barra",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -20.7178,
+      "lon": -46.313,
+      "x": 350.2,
+      "y": 282.039
+    },
+    {
+      "city": "São José do Alegre",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -22.3243,
+      "lon": -45.5258,
+      "x": 366.691,
+      "y": 318.217
+    },
+    {
+      "city": "São Lourenço",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.1166,
+      "lon": -45.0506,
+      "x": 376.646,
+      "y": 313.516
+    },
+    {
+      "city": "São Pedro da União",
+      "state": "MG",
+      "days": 4,
+      "regular": true,
+      "lat": -21.131,
+      "lon": -46.6123,
+      "x": 343.93,
+      "y": 291.306
+    },
+    {
+      "city": "São Sebastião da Bela Vista",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.1583,
+      "lon": -45.7546,
+      "x": 361.898,
+      "y": 314.46
+    },
+    {
+      "city": "São Sebastião do Paraíso",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -20.9167,
+      "lon": -46.9837,
+      "x": 336.149,
+      "y": 286.497
+    },
+    {
+      "city": "São Sebastião do Rio Verde",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.2183,
+      "lon": -44.9761,
+      "x": 378.207,
+      "y": 315.817
+    },
+    {
+      "city": "São Thomé das Letras",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.7218,
+      "lon": -44.9849,
+      "x": 378.023,
+      "y": 304.601
+    },
+    {
+      "city": "São Tomás de Aquino",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -20.7791,
+      "lon": -47.0962,
+      "x": 333.793,
+      "y": 283.412
+    },
+    {
+      "city": "São Vicente de Minas",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -21.7042,
+      "lon": -44.4431,
+      "x": 389.373,
+      "y": 304.205
+    },
+    {
+      "city": "Sapucaí-Mirim",
+      "state": "MG",
+      "days": 4,
+      "regular": true,
+      "lat": -22.7409,
+      "lon": -45.738,
+      "x": 362.246,
+      "y": 327.665
+    },
+    {
+      "city": "Senador Amaral",
+      "state": "MG",
+      "days": 4,
+      "regular": true,
+      "lat": -22.5869,
+      "lon": -46.1763,
+      "x": 353.064,
+      "y": 324.169
+    },
+    {
+      "city": "Senador José Bento",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.1633,
+      "lon": -46.1792,
+      "x": 353.003,
+      "y": 314.573
+    },
+    {
+      "city": "Seritinga",
+      "state": "MG",
+      "days": 4,
+      "regular": true,
+      "lat": -21.9134,
+      "lon": -44.518,
+      "x": 387.804,
+      "y": 308.925
+    },
+    {
+      "city": "Serrania",
+      "state": "MG",
+      "days": 4,
+      "regular": true,
+      "lat": -21.5441,
+      "lon": -46.0417,
+      "x": 355.884,
+      "y": 300.597
+    },
+    {
+      "city": "Serranos",
+      "state": "MG",
+      "days": 4,
+      "regular": true,
+      "lat": -21.8857,
+      "lon": -44.5125,
+      "x": 387.919,
+      "y": 308.299
+    },
+    {
+      "city": "Silvianópolis",
+      "state": "MG",
+      "days": 4,
+      "regular": true,
+      "lat": -22.0274,
+      "lon": -45.8385,
+      "x": 360.14,
+      "y": 311.5
+    },
+    {
+      "city": "Soledade de Minas",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.0554,
+      "lon": -45.0464,
+      "x": 376.734,
+      "y": 312.133
+    },
+    {
+      "city": "Tocos do Moji",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -22.3698,
+      "lon": -46.0971,
+      "x": 354.723,
+      "y": 319.247
+    },
+    {
+      "city": "Toledo",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -22.7421,
+      "lon": -46.3728,
+      "x": 348.947,
+      "y": 327.692
+    },
+    {
+      "city": "Três Corações",
+      "state": "MG",
+      "days": 2,
+      "regular": true,
+      "lat": -21.6921,
+      "lon": -45.2511,
+      "x": 372.446,
+      "y": 303.932
+    },
+    {
+      "city": "Três Pontas",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.3694,
+      "lon": -45.5109,
+      "x": 367.003,
+      "y": 296.665
+    },
+    {
+      "city": "Turvolândia",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.8733,
+      "lon": -45.7859,
+      "x": 361.242,
+      "y": 308.02
+    },
+    {
+      "city": "Varginha",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -21.5556,
+      "lon": -45.4364,
+      "x": 368.564,
+      "y": 300.856
+    },
+    {
+      "city": "Virgínia",
+      "state": "MG",
+      "days": 3,
+      "regular": true,
+      "lat": -22.3264,
+      "lon": -45.0965,
+      "x": 375.685,
+      "y": 318.264
+    },
+    {
+      "city": "Wenceslau Braz",
+      "state": "MG",
+      "days": 5,
+      "regular": true,
+      "lat": -22.5368,
+      "lon": -45.3626,
+      "x": 370.11,
+      "y": 323.033
+    }
+  ],
+  "source": "IBGE state geometry; city coordinates and published destinations from original RJ Lima website, 2026-09-09"
+}

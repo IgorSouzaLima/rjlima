@@ -85,7 +85,7 @@ export function createHeader({ showTrackingLink = true, isAdmin = false } = {}) 
     : `<a href="/" class="hover:text-red-500 transition">Inicio</a>
        <a href="/cidades-atendidas/" class="hover:text-red-500 transition">Cidades</a>
        ${showTrackingLink ? '<a href="/rastreio/" class="hover:text-red-500 transition">Rastrear</a>' : ''}
-       <a href="/#orcamento" class="bg-red-600 px-6 py-2 rounded-full hover:bg-red-700 transition shadow-lg shadow-red-600/20">Orcamento</a>`
+       <a href="/#cotacao" class="bg-red-600 px-6 py-2 rounded-full hover:bg-red-700 transition shadow-lg shadow-red-600/20">Orcamento</a>`
 
   return `
     <header class="fixed w-full z-50 glass top-0">
@@ -113,7 +113,7 @@ export function createHeader({ showTrackingLink = true, isAdmin = false } = {}) 
           : `<a href="/" class="text-lg py-2 border-b border-white/5">Inicio</a>
              <a href="/cidades-atendidas/" class="text-lg py-2 border-b border-white/5">Cidades atendidas</a>
              ${showTrackingLink ? '<a href="/rastreio/" class="text-lg py-2 border-b border-white/5">Rastrear</a>' : ''}
-             <a href="/#orcamento" class="text-lg py-2 text-red-500 font-bold">Solicitar Orcamento</a>`
+             <a href="/#cotacao" class="text-lg py-2 text-red-500 font-bold">Solicitar Orcamento</a>`
         }
       </div>
     </header>

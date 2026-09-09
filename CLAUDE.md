@@ -1,3 +1,9 @@
+# Preview architecture update
+
+The approved landing page and city directory now use Next.js App Router, React, and Tailwind 4. Keep Yarn as the package manager. `yarn build` first compiles the existing Vite tracking/admin pages using the Tailwind 3 alias, then builds Next.js. Legacy output is generated under `public/legacy` and served by rewrites from `/rastreio`, `/admin`, and `/admin/login`. Preserve Supabase auth/data/storage integrations.
+
+The following original guidelines still describe the operational subsystem:
+
 # RJ Lima Transportes - Project Guidelines
 
 ## Language Requirements
