@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 const base = process.argv[2] || 'http://127.0.0.1:3001';
+const production = process.argv.includes('--production');
 const checks = [
   ['/', 'Sua carga segue.'],
   ['/cidades-atendidas', 'Cidades atendidas em Minas Gerais.'],
@@ -16,7 +17,9 @@ for (const [path, content] of checks) {
   const html = await response.text();
   assert.ok(html.includes(content) || html.replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').includes(content), `Missing content: ${path}`);
   if (path === '/' || path === '/cidades-atendidas') {
-    assert.match(html, /name="robots" content="noindex, follow"/);
+    assert.match(html, production ? /name="robots" content="index, follow"/ : /name="robots" content="noindex, follow"/);
+    if (production) assert.doesNotMatch(response.headers.get('x-robots-tag') || '', /noindex/);
+    assert.ok(html.includes('https://www.rjlimatransportes.com.br'));
     assert.equal((html.match(/<h1[ >]/g) || []).length, 1);
   }
   if (path === '/') {
@@ -38,4 +41,10 @@ for (const path of ['/favicon-rjlima.svg','/assets/fonts.css','/assets/rjlima-lo
   console.log('OK',path);
 }
 assert.equal((await fetch(base + '/conceito')).status,404);
-console.log('Preview routes, assets, metadata and legacy entrypoints passed.');
+if (production) {
+  const robots = await (await fetch(base + '/robots.txt')).text();
+  assert.ok(robots.includes('Sitemap: https://www.rjlimatransportes.com.br/sitemap.xml'));
+  const comparison = await (await fetch(base + '/?comparar=1', {headers:{'User-Agent':'Googlebot'}})).text();
+  assert.match(comparison, /name="robots" content="noindex, follow"/);
+}
+console.log('Website routes, assets, metadata and legacy entrypoints passed.');

@@ -10,6 +10,6 @@ Use Node 22 or 24 and Yarn 1.22.22. Run `yarn install --frozen-lockfile`, `yarn 
 
 ## Preview deployment
 
-Vercel settings are provided in vercel.json. Push the preview branch and keep main unchanged. Preview indexing remains disabled. Before production, confirm the accepted preview, test tracking with a user-supplied fiscal key, verify the Supabase environment, and explicitly enable SEO_INDEXING_ENABLED=true only for the official domain.
+Vercel settings are provided in vercel.json. The user approved the preview and authorized publication on main. Indexing is explicitly enabled for the exact official hostname; preview URLs remain noindex. SEO_INDEXING_ENABLED=false can temporarily disable production indexing. Tracking and admin retain the verified public Supabase configuration; a real fiscal-key lookup still needs a user-provided key.
 
 See docs/vercel-preview.md for scope and checks.
