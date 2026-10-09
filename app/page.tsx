@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { TransportSite } from '../components/transport-site';
+import HomePage from '../components/home/HomePage';
 import { pageMetadata } from '../lib/page-metadata';
 import { HOME_TITLE, HOME_DESCRIPTION } from '../lib/seo.mjs';
 
@@ -9,4 +9,4 @@ export async function generateMetadata({searchParams}:Props):Promise<Metadata>{
  const preview=['comparar','visual','design'].some(key=>key in query);
  return pageMetadata(HOME_TITLE,HOME_DESCRIPTION,'/',preview);
 }
-export default function Home(){return <TransportSite/>;}
+export default function Home(){return <HomePage/>;}

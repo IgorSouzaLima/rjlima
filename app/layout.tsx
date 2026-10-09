@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 };
 export default function RootLayout({children}: Readonly<{children: React.ReactNode}>) {
   const data=JSON.stringify(organizationGraph()).replace(/</g,'\\u003c');
-  return <html lang="pt-BR" data-palette="marca"><head><link rel="stylesheet" href="/assets/fonts.css"/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:data}}/></head><body>{children}</body></html>;
+  return <html lang="pt-BR" data-palette="marca"><head><script type="application/ld+json" dangerouslySetInnerHTML={{__html:data}}/></head><body>{children}</body></html>;
 }
