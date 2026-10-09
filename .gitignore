@@ -31,3 +31,6 @@ Thumbs.db
 .vercel
 public/legacy
 *.tsbuildinfo
+
+# Impeccable working files (raw generation media, live sessions, critique snapshots)
+.impeccable

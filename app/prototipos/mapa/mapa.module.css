@@ -1,0 +1,134 @@
+/* Map lab for the "Baú e faixa" variant. Tokens copied from that variant so every option sits in the same livery. */
+
+.root {
+  --box: #f4f5f6;
+  --white: #ffffff;
+  --ink: #121417;
+  --muted: #4a5159;
+  --line: #d3d7dc;
+  --cab: #0e1012;
+  --cab-2: #1b1e22;
+  --yellow: #f4c300;
+  --red: #cc3528;
+
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 48px 24px 120px;
+  font-family: var(--bau-font), system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--box);
+  -webkit-font-smoothing: antialiased;
+}
+.root *, .root *::before, .root *::after { box-sizing: inherit; }
+.root ::selection { background: var(--yellow); color: var(--cab); }
+.root :focus-visible { outline: 3px solid var(--red); outline-offset: 2px; }
+.srOnly { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.head, .grid { max-width: 1320px; margin: 0 auto; }
+.title {
+  margin: 0; font-weight: 800; font-variation-settings: 'wdth' 72; font-size: clamp(2.25rem, 5vw, 3.5rem); line-height: 0.95;
+  letter-spacing: -0.012em; text-wrap: balance;
+}
+.lead { margin: 14px 0 0; max-width: 70ch; color: var(--muted); }
+
+.controls {
+  position: sticky; top: 0; z-index: 5; display: flex; flex-wrap: wrap; align-items: center; gap: 12px;
+  margin-top: 24px; padding: 14px 0; background: var(--box); border-bottom: 1px solid var(--line);
+}
+.search {
+  display: flex; align-items: center; gap: 8px; flex: 0 1 300px; min-height: 48px; padding: 0 14px;
+  background: var(--white); border: 2px solid var(--cab); border-radius: 4px;
+}
+.search input { flex: 1; min-width: 0; border: 0; outline: 0; font: inherit; background: transparent; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; flex: 1 1 auto; }
+.chips button, .toggle {
+  min-height: 44px; padding: 0 14px; font: inherit; font-weight: 700; font-size: 0.925rem; cursor: pointer;
+  background: var(--white); color: var(--ink); border: 1px solid var(--line); border-radius: 4px;
+}
+.chips button[aria-pressed='true'] { background: var(--cab); color: var(--white); border-color: var(--cab); }
+.toggle { border: 2px solid var(--cab); }
+.none { align-self: center; color: var(--muted); }
+
+.grid { display: grid; gap: 32px 28px; margin-top: 28px; }
+@media (min-width: 900px) { .grid { grid-template-columns: 1fr 1fr; } }
+.card { margin: 0; min-width: 0; }
+.frame { overflow: hidden; border: 1px solid var(--line); border-radius: 6px; background: var(--white); }
+.frameDark { background: var(--cab); border-color: var(--cab); }
+.map { display: block; width: 100%; height: auto; }
+.caption { display: flex; gap: 12px; margin-top: 12px; color: var(--muted); font-size: 0.95rem; }
+.caption strong { color: var(--ink); font-size: 1.05rem; margin-right: 4px; }
+.num {
+  flex: none; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%;
+  background: var(--cab); color: var(--yellow); font-weight: 800; font-size: 0.875rem;
+}
+.legend { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 8px; font-size: 0.875rem; font-variant-numeric: tabular-nums; }
+.legend > span { display: inline-flex; align-items: center; gap: 6px; }
+.key { display: inline-block; width: 10px; height: 10px; border-radius: 50%; }
+
+.cardRef .frame { opacity: 0.9; }
+.frameAtlas { background: #f1ede3; border-color: #cfc6b2; box-shadow: inset 0 0 0 6px #f1ede3, inset 0 0 0 7px #8f8471; }
+.miniToggle {
+  min-height: 36px; padding: 0 12px; font: inherit; font-weight: 700; font-size: 0.875rem; cursor: pointer;
+  background: var(--white); color: var(--ink); border: 1px solid var(--cab); border-radius: 4px;
+}
+
+/* Shared marks */
+.label { font-family: var(--bau-font), system-ui, sans-serif; font-weight: 700; fill: var(--ink); paint-order: stroke; stroke: var(--white); stroke-linejoin: round; }
+.labelSoft { font-family: var(--bau-font), system-ui, sans-serif; font-weight: 600; fill: var(--muted); paint-order: stroke; stroke: #f4f5f6; stroke-linejoin: round; }
+.labelPlate { font-family: var(--bau-font), system-ui, sans-serif; font-weight: 800; font-variation-settings: 'wdth' 80; fill: var(--ink); paint-order: stroke; stroke: var(--white); stroke-linejoin: round; }
+.labelNight { font-family: var(--bau-font), system-ui, sans-serif; font-weight: 700; fill: #f4f5f6; paint-order: stroke; stroke: var(--cab); stroke-linejoin: round; }
+.hub { fill: var(--red); stroke: var(--white); stroke-width: 2px; vector-effect: non-scaling-stroke; }
+
+/* 1. Current */
+.stateLight { fill: #e7eaee; stroke: var(--cab); stroke-width: 1.5px; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.dot { fill: var(--cab); opacity: 0.55; }
+.dotDim { fill: var(--cab); opacity: 0.14; }
+.dotMatch { fill: var(--yellow); stroke: var(--cab); stroke-width: 1px; vector-effect: non-scaling-stroke; }
+.dotSelected { fill: var(--yellow); stroke: var(--cab); stroke-width: 2px; vector-effect: non-scaling-stroke; }
+.routeCase { stroke: var(--cab); stroke-width: 7px; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+.routeYellow { stroke: var(--yellow); stroke-width: 3px; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+
+/* 2. Dot matrix */
+.matrixEdge { fill: none; stroke: #b9bfc6; stroke-width: 1px; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.matrixMatch { fill: var(--yellow); stroke: var(--cab); stroke-width: 1.5px; vector-effect: non-scaling-stroke; }
+.matrixRouteCase { stroke: var(--white); stroke-width: 8px; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+.matrixRoute { stroke: var(--red); stroke-width: 3px; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+.matrixSelected { fill: var(--yellow); stroke: var(--cab); stroke-width: 2.5px; vector-effect: non-scaling-stroke; }
+.matrixHub { fill: var(--red); stroke: var(--white); stroke-width: 2.5px; vector-effect: non-scaling-stroke; }
+
+/* 3. Road atlas */
+.atlasSea { fill: #f1ede3; }
+.atlasGrid line { stroke: #b9ae97; stroke-width: 0.6px; stroke-dasharray: 2 3; vector-effect: non-scaling-stroke; }
+.atlasNeighbour { font-family: var(--bau-font), system-ui, sans-serif; font-weight: 600; font-variation-settings: 'wdth' 110; fill: #9a8f7a; }
+.atlasLand { fill: #fbf8f1; }
+.atlasBorder { fill: none; stroke: #6d4c8f; stroke-width: 1.4px; stroke-dasharray: 6 2 1.5 2; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.atlasTown { fill: #fbf8f1; stroke: #3d3a33; stroke-width: 0.9px; vector-effect: non-scaling-stroke; }
+.atlasTownBig { fill: #3d3a33; stroke: #fbf8f1; stroke-width: 1px; vector-effect: non-scaling-stroke; }
+.atlasTownOn { fill: var(--red); stroke: #fbf8f1; stroke-width: 1px; vector-effect: non-scaling-stroke; }
+.atlasTownOff { fill: #fbf8f1; stroke: #c9c0ad; stroke-width: 0.8px; vector-effect: non-scaling-stroke; }
+.atlasTownSel { fill: var(--red); stroke: #fbf8f1; stroke-width: 1.5px; vector-effect: non-scaling-stroke; }
+.atlasRoadCase { stroke: #7a2a20; stroke-width: 6px; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+.atlasRoad { stroke: #e8574a; stroke-width: 3.6px; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+.atlasName { font-family: var(--bau-font), system-ui, sans-serif; font-weight: 700; font-variation-settings: 'wdth' 85; letter-spacing: 0.04em; fill: #3d3a33; paint-order: stroke; stroke: #fbf8f1; stroke-linejoin: round; }
+.atlasNameSel { font-family: var(--bau-font), system-ui, sans-serif; font-weight: 800; font-variation-settings: 'wdth' 85; fill: #1f1c17; paint-order: stroke; stroke: #fbf8f1; stroke-linejoin: round; }
+.atlasHubRing { fill: none; stroke: #1f1c17; stroke-width: 1.4px; vector-effect: non-scaling-stroke; }
+.atlasHub { fill: var(--red); }
+.atlasScale text { font-family: var(--bau-font), system-ui, sans-serif; font-weight: 600; fill: #3d3a33; }
+.atlasScaleDark { fill: #3d3a33; }
+.atlasScaleLight { fill: #fbf8f1; stroke: #3d3a33; stroke-width: 0.8px; vector-effect: non-scaling-stroke; }
+.atlasNorth path { fill: #3d3a33; }
+.atlasNorth text { font-family: var(--bau-font), system-ui, sans-serif; font-weight: 800; fill: #3d3a33; }
+
+/* 4. Night routes */
+.night { fill: var(--cab); }
+.stateNight { fill: #15181b; stroke: #3a4047; stroke-width: 1px; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.arc { fill: none; stroke: var(--yellow); stroke-width: 0.6px; opacity: 0.32; vector-effect: non-scaling-stroke; }
+.arcOn { fill: none; stroke: var(--yellow); stroke-width: 1px; opacity: 0.85; vector-effect: non-scaling-stroke; }
+.arcOff { fill: none; stroke: var(--yellow); stroke-width: 0.5px; opacity: 0.06; vector-effect: non-scaling-stroke; }
+.arcGlow { fill: none; stroke: var(--yellow); stroke-width: 6px; opacity: 0.7; vector-effect: non-scaling-stroke; }
+.arcSel { fill: none; stroke: #fff4c2; stroke-width: 2.4px; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+.dotNight { fill: var(--yellow); opacity: 0.9; }
+.dotSelectedNight { fill: var(--yellow); stroke: var(--white); stroke-width: 2px; vector-effect: non-scaling-stroke; }
+.hubNight { fill: var(--red); stroke: var(--white); stroke-width: 2px; vector-effect: non-scaling-stroke; }
